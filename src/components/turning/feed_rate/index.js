@@ -2,7 +2,7 @@ import { InputCommon } from '../../common/input';
 import vc from '../../../public/img/turning/power_requirements/t_vc.png';
 import ls from '../../../public/img/turning/feed_rate/t_ls.png';
 import dm from '../../../public/img/turning/feed_rate/t_dm.png';
-import wtc from '../../../public/img/w_tc.png';
+import wf from '../../../public/img/w_f.png';
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 import { Result } from '../../common/result';
@@ -34,7 +34,7 @@ export const FeedRate = () => {
                     <InputCommon src={ls} placeholder="Legth of Cut/min" setValue={setF}/>
                     <InputCommon src={dm} placeholder="Diameter" setValue={setD1}/>
                 </div>
-                <Result src={wtc} result={result} unit="sec" setValue={setResult} />
+                <Result src={wf} result={result} unit="mm/rev" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

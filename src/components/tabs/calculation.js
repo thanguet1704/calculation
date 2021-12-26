@@ -23,6 +23,8 @@ import { CuttingSpeed } from '../turning/cutting_speed';
 import { SpindleSpeed } from '../turning/spindle_speed';
 import { FeedRate } from '../turning/feed_rate';
 import { CuttingForce } from '../turning/cutting_force';
+import pdf from '../../public/img/pdf.png';
+import file from '../../public/assets/calc_pdf_m.pdf';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -60,6 +62,14 @@ const a11yProps = (index) => {
 const iconTabStyle = {
   width: 40,
   height: 'auto'
+};
+
+const pdfStyle = {
+  fontSize: '90%',
+};
+
+const iconStyle = {
+  width: '10%'
 };
 
 export const Calculation = (props) => {
@@ -100,6 +110,14 @@ export const Calculation = (props) => {
     <TabPanel value={value} index={0}>
       <Box sx={{ width: '100%' }}>
         <Figure />
+        <div style={{ display: 'flex', justifyContent: 'flex-end'}}>
+            <p style={pdfStyle}>
+                <a href={file} target="_blank" title="PDF:Calculation Formula(Milling)" rel="noopener noreferrer">
+                    > Calculation Formula 
+                    <img src={pdf} style={iconStyle} alt="" />
+                </a>
+            </p>
+        </div>
         <div id="tc">
           <p><b>1. Cutting Time T <sub>c</sub> [sec]<hr/></b></p>
           <TabMenu />
@@ -142,6 +160,7 @@ export const Calculation = (props) => {
           <p><b>6. Cutting Force P [kN]<hr/></b></p>
           <CuttingForce />
         </div>
+        <h2 class="section-title hidden-phone">Cutting Calculation App 「SumiTool Calculator」</h2>
       </Box>
     </TabPanel>
     <TabPanel value={value} index={1}>

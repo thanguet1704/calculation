@@ -4,7 +4,7 @@ import f from '../../../../public/img/turning/cutting_time/facing/t1/t_f.png';
 import d1 from '../../../../public/img/turning/cutting_time/facing/t1/t_d1.png';
 import d2 from '../../../../public/img/turning/cutting_time/facing/t1/t_d2.png';
 import N from '../../../../public/img/turning/cutting_time/facing/t1/t_npass.png';
-import wtc from '../../../../public/img/w_tc.png';
+import wt1 from '../../../../public/img/w_t1.png';
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 import { Result } from '../../../common/result';
@@ -39,7 +39,7 @@ export const FacingT1 = () => {
                     <InputCommon src={d2} placeholder="Min. Diameter" setValue={setL}/>
                     <InputCommon src={N} placeholder="Number of Pass" setValue={setL}/>
                 </div>
-                <Result src={wtc} result={result} unit="sec" setValue={setResult} />
+                <Result src={wt1} result={result} unit="sec" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

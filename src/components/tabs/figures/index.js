@@ -6,6 +6,7 @@ import feedRate from '../../../public/img/turning/figures/feed_rate.png';
 import cuttingForce from '../../../public/img/turning/figures/cutting_force.png';
 import Grid from '@mui/material/Grid';
 
+
 const figures = [
     {
         href: '#tc',

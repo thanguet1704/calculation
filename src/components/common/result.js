@@ -1,25 +1,22 @@
 const resultStyle = {
-    display: 'block',
     height: 45,
     width: '50%',
     fontSize: 25,
-    lineHeight: 45,
     textAlign: 'right',
     backgroundColor: '#004C31',
-    color: '#FFF',
+    color: 'white',
     borderRadius: 10,
     padding: '0 10px 0 0px',
     overflow: 'hidden',
     margin: '20px auto 0',
     position: 'relative',
-    zIndex: -1,
 };
 
 const imgStyle = {
     position: 'absolute',
     left: 0,
     height: '100%',
-    width: 'auto'
+    width: 'auto',
 };
 
 const outputStyle = {
@@ -27,17 +24,22 @@ const outputStyle = {
     right: 0,
     height: '100%',
     width: 'auto',
-    zIndex: 10,
     color: '#fff',
     display: 'inline',
+    textAlign: 'right',
+    overflow: 'hidden',
+    padding: 5
 };
 
-export const Result = ({ src, result, unit}) => {
+const spanStyle = {
+    fontSize: '50%'
+};
+
+export const Result = ({ src, result, unit, sup}) => {
     return (
         <p style={resultStyle}>
+            <output style={outputStyle}>{result} <span style={spanStyle}>{unit}<sup>{sup}</sup></span></output>
             <img src={src} alt="" style={imgStyle} />
-            <output style={outputStyle}>{result}</output>
-            <span>{unit}</span>
         </p>
     );
 };

@@ -1,7 +1,7 @@
 import { InputCommon } from '../../common/input';
 import n from '../../../public/img/turning/cutting_speed/t_n.png';
 import dm from '../../../public/img/turning/cutting_speed/t_dm.png';
-import wtc from '../../../public/img/w_tc.png';
+import wvc from '../../../public/img/w_vc.png';
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 import { Result } from '../../common/result';
@@ -29,7 +29,7 @@ export const CuttingSpeed = () => {
                         <InputCommon src={dm} placeholder="Diameter" setValue={setF}/>
                     </Grid>
                 </Grid>
-                <Result src={wtc} result={result} unit="sec" setValue={setResult} />
+                <Result src={wvc} result={result} unit="m/min" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

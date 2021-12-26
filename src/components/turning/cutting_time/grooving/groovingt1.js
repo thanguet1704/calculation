@@ -3,7 +3,7 @@ import vc from '../../../../public/img/turning/cutting_time/facing/t1/t_vc.png';
 import f from '../../../../public/img/turning/cutting_time/facing/t1/t_f.png';
 import d1 from '../../../../public/img/turning/cutting_time/facing/t1/t_d1.png';
 import d2 from '../../../../public/img/turning/cutting_time/facing/t1/t_d2.png';
-import wtc from '../../../../public/img/w_tc.png';
+import wt1 from '../../../../public/img/w_t1.png';
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 import { Result } from '../../../common/result';
@@ -37,7 +37,7 @@ export const GroovingT1 = () => {
                     <InputCommon src={d1} placeholder="Max. Diameter" setValue={setL}/>
                     <InputCommon src={d2} placeholder="Min. Diameter" setValue={setL}/>
                 </div>
-                <Result src={wtc} result={result} unit="sec" setValue={setResult} />
+                <Result src={wt1} result={result} unit="sec" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

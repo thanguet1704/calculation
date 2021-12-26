@@ -4,7 +4,7 @@ import f from '../../../public/img/turning/power_requirements/t_f.png';
 import ap from '../../../public/img/turning/power_requirements/t_ap.png';
 import kc from '../../../public/img/turning/power_requirements/t_kc.png';
 import eta from '../../../public/img/turning/power_requirements/t_eta.png';
-import wtc from '../../../public/img/w_tc.png';
+import wpc from '../../../public/img/w_pc.png';
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 import { Result } from '../../common/result';
@@ -110,7 +110,7 @@ export const PowerRequirement = () => {
                     <Selector src={kc} defaultLabe="Specific Cutting Force" items={CuttingForces}/>
                     <InputCommon src={eta} placeholder="Machine Efficiency(70-85)" setValue={setD1}/>
                 </div>
-                <Result src={wtc} result={result} unit="sec" setValue={setResult} />
+                <Result src={wpc} result={result} unit="kW" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

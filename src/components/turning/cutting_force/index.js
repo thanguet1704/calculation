@@ -1,10 +1,8 @@
 import { InputCommon } from '../../common/input';
-import vc from '../../../public/img/turning/power_requirements/t_vc.png';
 import f from '../../../public/img/turning/power_requirements/t_f.png';
 import ap from '../../../public/img/turning/power_requirements/t_ap.png';
 import kc from '../../../public/img/turning/power_requirements/t_kc.png';
-import eta from '../../../public/img/turning/power_requirements/t_eta.png';
-import wtc from '../../../public/img/w_tc.png';
+import wp from '../../../public/img/w_p.png';
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 import { Result } from '../../common/result';
@@ -108,7 +106,7 @@ export const CuttingForce = () => {
                     <InputCommon src={ap} placeholder="Depth of Cut" setValue={setD1}/>
                     <Selector src={kc} defaultLabe="Specific Cutting Force" items={CuttingForces}/>
                 </div>
-                <Result src={wtc} result={result} unit="sec" setValue={setResult} />
+                <Result src={wp} result={result} unit="kN" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

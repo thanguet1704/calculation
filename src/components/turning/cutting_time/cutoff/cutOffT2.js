@@ -3,7 +3,7 @@ import t1 from '../../../../public/img/turning/cutting_time/cutoff/t2/t_t1.png';
 import f from '../../../../public/img/turning/cutting_time/facing/t1/t_f.png';
 import d3 from '../../../../public/img/turning/cutting_time/cutoff/t1/t_d3.png';
 import nmax from '../../../../public/img/turning/cutting_time/cutoff/t2/t_nmax.png';
-import wtc from '../../../../public/img/w_tc.png';
+import wt2 from '../../../../public/img/w_t2.png';
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 import { Result } from '../../../common/result';
@@ -37,7 +37,7 @@ export const CutOffT2 = () => {
                     <InputCommon src={d3} placeholder="Dia. at nmax" setValue={setL}/>
                     <InputCommon src={nmax} placeholder="Max.Spindle Speed" setValue={setL}/>
                 </div>
-                <Result src={wtc} result={result} unit="sec" setValue={setResult} />
+                <Result src={wt2} result={result} unit="sec" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

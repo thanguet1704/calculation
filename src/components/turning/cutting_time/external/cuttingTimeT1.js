@@ -6,7 +6,7 @@ import d from '../../../../public/img/turning/cutting_time/external/t1/t_dm.png'
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 import { Result } from '../../../common/result';
-import wtc from '../../../../public/img/w_tc.png';
+import wt1 from '../../../../public/img/w_t1.png';
 
 const divInputStyle = {
     width: '100%',
@@ -38,7 +38,7 @@ export const CuttingTimeT1 = () => {
                     <InputCommon src={l} placeholder="Length of Cut" setValue={setL}/>
                     <InputCommon src={d} placeholder="Diameter" setValue={setD}/>
                 </div>
-                <Result src={wtc} result={result} unit="sec" setValue={setResult} />
+                <Result src={wt1} result={result} unit="sec" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>
