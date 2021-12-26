@@ -152,7 +152,7 @@ export const Calculation = (props) => {
             </p>
         </div>
         <div id="tc">
-          <p><b>1. Cutting Time T <sub>c</sub> [sec]<hr/></b></p>
+          <h2><b>1. Cutting Time T <sub>c</sub> [sec]<hr/></b></h2>
           <TabMenu />
           <CuttingTimeTC />
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
@@ -174,23 +174,23 @@ export const Calculation = (props) => {
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
         </div>
         <div id="pc">
-          <p><b>2. Power Requirements P <sub>c</sub> [kW]<hr/></b></p>
+          <h2><b>2. Power Requirements P <sub>c</sub> [kW]<hr/></b></h2>
           <PowerRequirement />
         </div>
         <div id="vc">
-          <p><b>3. Cutting Speed vc [m/min]<hr/></b></p>
+          <h2><b>3. Cutting Speed vc [m/min]<hr/></b></h2>
           <CuttingSpeed />
         </div>
         <div id="n">
-          <p><b>4. Spindle Speed n [min <sup>-1</sup><hr/></b></p>
+          <h2><b>4. Spindle Speed n [min <sup>-1</sup><hr/></b></h2>
           <SpindleSpeed />
         </div>
         <div id="f">
-          <p><b>5. Feed Rate f [mm/rev]<hr/></b></p>
+          <h2><b>5. Feed Rate f [mm/rev]<hr/></b></h2>
           <FeedRate />
         </div>
         <div id="p">
-          <p><b>6. Cutting Force P [kN]<hr/></b></p>
+          <h2><b>6. Cutting Force P [kN]<hr/></b></h2>
           <CuttingForce />
         </div>
       </Box>
@@ -207,23 +207,23 @@ export const Calculation = (props) => {
             </p>
         </div>
         <div id="tc">
-          <p><b>1. Cutting Time T <sub>c</sub> [sec]<hr/></b></p>
+          <h2><b>1. Cutting Time T <sub>c</sub> [sec]<hr/></b></h2>
           <MillingCuttingTime />
         </div>
         <div id="pc">
-          <p><b>2. Power Requirements P <sub>c</sub> [kW]<hr/></b></p>
+          <h2><b>2. Power Requirements P <sub>c</sub> [kW]<hr/></b></h2>
           <MillingPowerRequirement />
         </div>
         <div id="vc">
-          <p><b>3. Cutting Speed vc [m/min]<hr/></b></p>
+          <h2><b>3. Cutting Speed vc [m/min]<hr/></b></h2>
           <MillingCuttingSpeed />
         </div>
         <div id="n">
-          <p><b>4. Spindle Speed n [min <sup>-1</sup><hr/></b></p>
+          <h2><b>4. Spindle Speed n [min <sup>-1</sup><hr/></b></h2>
           <MillingSpindleSpeed />
         </div>
         <div id="f">
-          <p><b>5. Feed Rate per Tooth fz [mm/t]<hr/></b></p>
+          <h2><b>5. Feed Rate per Tooth fz [mm/t]<hr/></b></h2>
           <MillingFeedRate />
         </div>
       </Box>
@@ -240,23 +240,23 @@ export const Calculation = (props) => {
             </p>
         </div>
         <div id="tc">
-          <p><b>1. Cutting Time T <sub>c</sub> [sec]<hr/></b></p>
+          <h2><b>1. Cutting Time T <sub>c</sub> [sec]<hr/></b></h2>
           <DrillingCuttingTime />
         </div>
         <div id="pc">
-          <p><b>2. Power Requirements P <sub>c</sub> [kW]<hr/></b></p>
+          <h2><b>2. Power Requirements P <sub>c</sub> [kW]<hr/></b></h2>
           <DrillingPowerRequirement />
         </div>
         <div id="vc">
-          <p><b>3. Cutting Speed vc [m/min]<hr/></b></p>
+          <h2><b>3. Cutting Speed vc [m/min]<hr/></b></h2>
           <DrillingCuttingSpeed />
         </div>
         <div id="n">
-          <p><b>4. Spindle Speed n [min <sup>-1</sup>]<hr/></b></p>
+          <h2><b>4. Spindle Speed n [min <sup>-1</sup>]<hr/></b></h2>
           <DrillingSpindleSpeed />
         </div>
         <div id="f">
-          <p><b>5. Feed Rate per Tooth fz [mm/t]<hr/></b></p>
+          <h2><b>5. Feed Rate per Tooth fz [mm/t]<hr/></b></h2>
           <DrillingFeedRate />
         </div>
       </Box>

@@ -32,7 +32,7 @@ export const GroovingTC = () => {
     return (
         <form id="tab-gr">
             <div style={{ display: 'flex', flexDirection: 'column'}}>
-                <h3><b>[Grooving]<br/>&emsp;Cutting Time T<sub>c</sub> (Reference : n) [sec]</b></h3>
+                <h4><b>[Grooving]<br/>&emsp;Cutting Time T<sub>c</sub> (Reference : n) [sec]</b></h4>
                 <div style={divInputStyle}>
                     <InputCommon src={n} placeholder="Spindle Speed" setValue={setN}/>
                     <InputCommon src={f} placeholder="Feed Rate" setValue={setF}/>

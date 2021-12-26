@@ -30,7 +30,7 @@ export const CutOffT2 = () => {
     return (
         <form>
             <div style={{ display: 'flex', flexDirection: 'column'}}>
-                <h3><b>[Cut-Off]<br/>&emsp;Cutting Time T<sub>2</sub> (Reference : vc, n, max) [sec]</b></h3>
+                <h4><b>[Cut-Off]<br/>&emsp;Cutting Time T<sub>2</sub> (Reference : vc, n, max) [sec]</b></h4>
                 <div style={divInputStyle}>
                     <InputCommon src={t1} placeholder="Cutting Speed" setValue={setN}/>
                     <InputCommon src={f} placeholder="Feed Rate" setValue={setF}/>

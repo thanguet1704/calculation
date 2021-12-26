@@ -31,7 +31,7 @@ export const CuttingTimeT1 = () => {
     return (
         <form id="tab-ex">
             <div style={{ display: 'flex', flexDirection: 'column'}}>
-                <h3><b>[External]<br/>&emsp;Cutting Time T<sub>1</sub> (Reference : vc) [sec]</b></h3>
+                <h4><b>[External]<br/>&emsp;Cutting Time T<sub>1</sub> (Reference : vc) [sec]</b></h4>
                 <div style={divInputStyle}>
                     <InputCommon src={vc} placeholder="Cutting Speed" setValue={setVC}/>
                     <InputCommon src={f} placeholder="Feed Rate" setValue={setF}/>
