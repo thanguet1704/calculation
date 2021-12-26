@@ -24,7 +24,22 @@ import { SpindleSpeed } from '../turning/spindle_speed';
 import { FeedRate } from '../turning/feed_rate';
 import { CuttingForce } from '../turning/cutting_force';
 import pdf from '../../public/img/pdf.png';
-import file from '../../public/assets/calc_pdf_m.pdf';
+import file from '../../public/assets/pdf/turning/calc_pdf_m.pdf';
+import millingFilePdf from '../../public/assets/pdf/milling/calc_pdf_m.pdf'
+import drillingFilePdf from '../../public/assets/pdf/drilling/calc_pdf_d.pdf'
+import { turningFigures } from '../tabs/figures/turning_figures';
+import { millingFigures } from '../tabs/figures/milling_figures';
+import { MillingCuttingTime } from './milling/cutting_time';
+import { MillingPowerRequirement } from './milling/power_requirement';
+import { MillingCuttingSpeed } from './milling/cutting_speed';
+import { MillingSpindleSpeed } from './milling/spindle_speed';
+import { MillingFeedRate } from './milling/feed_rate';
+import { drillingFigures } from '../tabs/figures/drilling_figures';
+import { DrillingCuttingTime } from './drilling/cutting_time';
+import { DrillingPowerRequirement } from './drilling/power_requirement';
+import { DrillingCuttingSpeed } from './drilling/cutting_speed';
+import { DrillingSpindleSpeed } from './drilling/spindle_speed';
+import { DrillingFeedRate } from './drilling/feed_rate';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -72,6 +87,19 @@ const iconStyle = {
   width: '10%'
 };
 
+const floatButtonStyle = {
+  width: '3em',
+  height: '3em',
+  borderRadius: 50,
+  position: 'fixed',
+  bottom: '1em',
+  right: '1em',
+  display: 'flex',
+  justifyContent: 'center',
+  backgroundColor: 'rgb(0, 76, 49)',
+  color: '#fff'
+};
+
 export const Calculation = (props) => {
   const { setTitle } = props;
   const [value, setValue] = React.useState(0);
@@ -99,7 +127,12 @@ export const Calculation = (props) => {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
+  <Box sx={{ width: '100%' }}>
+    <div style={floatButtonStyle}>
+      <a href="#home" style={floatButtonStyle}>
+        <p>^</p>
+      </a>
+    </div>
     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
       <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
         <Tab icon={<img src={appTurning} alt="" style={iconTabStyle}/>} label="Turning" {...a11yProps(0)} />
@@ -109,7 +142,7 @@ export const Calculation = (props) => {
     </Box>
     <TabPanel value={value} index={0}>
       <Box sx={{ width: '100%' }}>
-        <Figure />
+        <Figure figures={turningFigures}/>
         <div style={{ display: 'flex', justifyContent: 'flex-end'}}>
             <p style={pdfStyle}>
                 <a href={file} target="_blank" title="PDF:Calculation Formula(Milling)" rel="noopener noreferrer">
@@ -160,14 +193,74 @@ export const Calculation = (props) => {
           <p><b>6. Cutting Force P [kN]<hr/></b></p>
           <CuttingForce />
         </div>
-        <h2 class="section-title hidden-phone">Cutting Calculation App 「SumiTool Calculator」</h2>
       </Box>
     </TabPanel>
     <TabPanel value={value} index={1}>
-      Item Two
+    <Box sx={{ width: '100%' }}>
+        <Figure figures={millingFigures} />
+        <div style={{ display: 'flex', justifyContent: 'flex-end'}}>
+            <p style={pdfStyle}>
+                <a href={millingFilePdf} target="_blank" title="PDF:Calculation Formula(Milling)" rel="noopener noreferrer">
+                    > Calculation Formula 
+                    <img src={pdf} style={iconStyle} alt="" />
+                </a>
+            </p>
+        </div>
+        <div id="tc">
+          <p><b>1. Cutting Time T <sub>c</sub> [sec]<hr/></b></p>
+          <MillingCuttingTime />
+        </div>
+        <div id="pc">
+          <p><b>2. Power Requirements P <sub>c</sub> [kW]<hr/></b></p>
+          <MillingPowerRequirement />
+        </div>
+        <div id="vc">
+          <p><b>3. Cutting Speed vc [m/min]<hr/></b></p>
+          <MillingCuttingSpeed />
+        </div>
+        <div id="n">
+          <p><b>4. Spindle Speed n [min <sup>-1</sup><hr/></b></p>
+          <MillingSpindleSpeed />
+        </div>
+        <div id="f">
+          <p><b>5. Feed Rate per Tooth fz [mm/t]<hr/></b></p>
+          <MillingFeedRate />
+        </div>
+      </Box>
     </TabPanel>
     <TabPanel value={value} index={2}>
-      Item Three
+    <Box sx={{ width: '100%' }}>
+        <Figure figures={drillingFigures} />
+        <div style={{ display: 'flex', justifyContent: 'flex-end'}}>
+            <p style={pdfStyle}>
+                <a href={drillingFilePdf} target="_blank" title="PDF:Calculation Formula(Milling)" rel="noopener noreferrer">
+                    > Calculation Formula 
+                    <img src={pdf} style={iconStyle} alt="" />
+                </a>
+            </p>
+        </div>
+        <div id="tc">
+          <p><b>1. Cutting Time T <sub>c</sub> [sec]<hr/></b></p>
+          <DrillingCuttingTime />
+        </div>
+        <div id="pc">
+          <p><b>2. Power Requirements P <sub>c</sub> [kW]<hr/></b></p>
+          <DrillingPowerRequirement />
+        </div>
+        <div id="vc">
+          <p><b>3. Cutting Speed vc [m/min]<hr/></b></p>
+          <DrillingCuttingSpeed />
+        </div>
+        <div id="n">
+          <p><b>4. Spindle Speed n [min <sup>-1</sup>]<hr/></b></p>
+          <DrillingSpindleSpeed />
+        </div>
+        <div id="f">
+          <p><b>5. Feed Rate per Tooth fz [mm/t]<hr/></b></p>
+          <DrillingFeedRate />
+        </div>
+      </Box>
     </TabPanel>
+    <h2 class="section-title hidden-phone">Cutting Calculation App 「SumiTool Calculator」</h2>
   </Box>
 )};

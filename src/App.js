@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <Container maxWidth="xl">
-      <h1 style={{ marginTop: 20, display: 'flex', alignItems: 'center' }}>
+      <h1 id="home" style={{ marginTop: 20, display: 'flex', alignItems: 'center' }}>
         <HomeIcon />
         <b> Cutting Calculation ({title})</b>
       </h1>
