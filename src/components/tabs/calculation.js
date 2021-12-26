@@ -18,6 +18,11 @@ import { GroovingT1 } from '../turning/cutting_time/grooving/groovingt1';
 import { CutOffTC } from '../turning/cutting_time/cutoff/cutOffTc';
 import { CutOffT1 } from '../turning/cutting_time/cutoff/cutOffT1';
 import { CutOffT2 } from '../turning/cutting_time/cutoff/cutOffT2';
+import { PowerRequirement } from '../turning/power_requirements';
+import { CuttingSpeed } from '../turning/cutting_speed';
+import { SpindleSpeed } from '../turning/spindle_speed';
+import { FeedRate } from '../turning/feed_rate';
+import { CuttingForce } from '../turning/cutting_force';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -119,18 +124,23 @@ export const Calculation = (props) => {
         </div>
         <div id="pc">
           <p><b>2. Power Requirements P <sub>c</sub> [kW]<hr/></b></p>
+          <PowerRequirement />
         </div>
         <div id="vc">
           <p><b>3. Cutting Speed vc [m/min]<hr/></b></p>
+          <CuttingSpeed />
         </div>
         <div id="n">
           <p><b>4. Spindle Speed n [min <sup>-1</sup><hr/></b></p>
+          <SpindleSpeed />
         </div>
         <div id="f">
           <p><b>5. Feed Rate f [mm/rev]<hr/></b></p>
+          <FeedRate />
         </div>
         <div id="p">
           <p><b>6. Cutting Force P [kN]<hr/></b></p>
+          <CuttingForce />
         </div>
       </Box>
     </TabPanel>
