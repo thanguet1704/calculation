@@ -24,22 +24,4 @@ export const turningFigures = [
         title: 'Cutting Speed',
         alt: '',
     },
-    {
-        href: '#n',
-        src: spindleSpeed,
-        title: 'Spindle Speed',
-        alt: '',
-    },
-    {
-        href: '#f',
-        src: feedRate,
-        title: 'Feed Rate',
-        alt: '',
-    },
-    {
-        href: '#p',
-        src: cuttingForce,
-        title: 'Cutting Force',
-        alt: '',
-    },
 ];

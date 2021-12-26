@@ -3,7 +3,7 @@ const resultStyle = {
     width: '50%',
     fontSize: 25,
     textAlign: 'right',
-    backgroundColor: '#004C31',
+    backgroundColor: '#264653',
     color: 'white',
     borderRadius: 10,
     padding: '0 10px 0 0px',

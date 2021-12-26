@@ -76,7 +76,7 @@ const a11yProps = (index) => {
 
 const iconTabStyle = {
   width: 40,
-  height: 'auto'
+  height: 'auto',
 };
 
 const pdfStyle = {
@@ -97,7 +97,7 @@ const floatButtonStyle = {
   display: 'flex',
   justifyContent: 'center',
   backgroundColor: 'rgb(0, 76, 49)',
-  color: '#fff'
+  color: '#fff',
 };
 
 export const Calculation = (props) => {
@@ -181,18 +181,6 @@ export const Calculation = (props) => {
           <h2><b>3. Cutting Speed vc [m/min]<hr/></b></h2>
           <CuttingSpeed />
         </div>
-        <div id="n">
-          <h2><b>4. Spindle Speed n [min <sup>-1</sup><hr/></b></h2>
-          <SpindleSpeed />
-        </div>
-        <div id="f">
-          <h2><b>5. Feed Rate f [mm/rev]<hr/></b></h2>
-          <FeedRate />
-        </div>
-        <div id="p">
-          <h2><b>6. Cutting Force P [kN]<hr/></b></h2>
-          <CuttingForce />
-        </div>
       </Box>
     </TabPanel>
     <TabPanel value={value} index={1}>
@@ -218,14 +206,6 @@ export const Calculation = (props) => {
           <h2><b>3. Cutting Speed vc [m/min]<hr/></b></h2>
           <MillingCuttingSpeed />
         </div>
-        <div id="n">
-          <h2><b>4. Spindle Speed n [min <sup>-1</sup><hr/></b></h2>
-          <MillingSpindleSpeed />
-        </div>
-        <div id="f">
-          <h2><b>5. Feed Rate per Tooth fz [mm/t]<hr/></b></h2>
-          <MillingFeedRate />
-        </div>
       </Box>
     </TabPanel>
     <TabPanel value={value} index={2}>
@@ -250,14 +230,6 @@ export const Calculation = (props) => {
         <div id="vc">
           <h2><b>3. Cutting Speed vc [m/min]<hr/></b></h2>
           <DrillingCuttingSpeed />
-        </div>
-        <div id="n">
-          <h2><b>4. Spindle Speed n [min <sup>-1</sup>]<hr/></b></h2>
-          <DrillingSpindleSpeed />
-        </div>
-        <div id="f">
-          <h2><b>5. Feed Rate per Tooth fz [mm/t]<hr/></b></h2>
-          <DrillingFeedRate />
         </div>
       </Box>
     </TabPanel>

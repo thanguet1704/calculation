@@ -23,16 +23,4 @@ export const millingFigures = [
         title: 'Cutting Speed',
         alt: '',
     },
-    {
-        href: '#n',
-        src: spindleSpeed,
-        title: 'Spindle Speed',
-        alt: '',
-    },
-    {
-        href: '#f',
-        src: feedRate,
-        title: 'Feed Rate per Tooth',
-        alt: '',
-    },
 ];

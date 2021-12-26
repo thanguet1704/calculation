@@ -26,6 +26,10 @@ export const CuttingTimeTC = () => {
         setReset(true);
     };
 
+    const handleOnReset = (event) => {
+        event.target.value = '';
+    }
+
     return (
         <form>
             <div style={{ display: 'flex', flexDirection: 'column'}}>

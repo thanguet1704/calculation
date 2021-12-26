@@ -16,7 +16,7 @@ const imgStyle = {
 
 export const InputCommon = ({ src, placeholder, setValue }) => {
     const handleOnChange = (event) => {
-        console.log(event);
+        event.target.value = '';
     }
 
     return (
