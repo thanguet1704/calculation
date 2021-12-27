@@ -15,14 +15,10 @@ const imgStyle = {
 };
 
 export const InputCommon = ({ src, placeholder, setValue }) => {
-    const handleOnChange = (event) => {
-        event.target.value = '';
-    }
-
     return (
         <p>
             <img src={src} alt="" style={imgStyle} />
-            <input type="number" placeholder={placeholder} inputmode="decimal" style={inputStyle} onChange={handleOnChange}/>
+            <input type="number" placeholder={placeholder} inputmode="decimal" style={inputStyle}/>
         </p>
     );
 };
