@@ -1,4 +1,4 @@
-import wvc from '../../../../public/img/w_t1.png';
+import wvc from '../../../../public/img/w_vc.png';
 import { useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
 import { Result } from '../../../common/result';

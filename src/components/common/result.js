@@ -38,7 +38,7 @@ const spanStyle = {
 export const Result = ({ src, result, unit, sup}) => {
     return (
         <p style={resultStyle}>
-            <output style={outputStyle}>{result} <span style={spanStyle}>{unit}<sup>{sup}</sup></span></output>
+            <output style={outputStyle}>{result || 0} <span style={spanStyle}>{unit}<sup>{sup}</sup></span></output>
             <img src={src} alt="" style={imgStyle} />
         </p>
     );
