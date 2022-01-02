@@ -7,6 +7,12 @@ import cuttingForce from '../../../public/img/turning/figures/cutting_force.png'
 
 export const turningFigures = [
     {
+        href: '#vc',
+        src: cuttingSpeed,
+        title: 'Cutting Speed',
+        alt: '',
+    },
+    {
         href: '#tc',
         src: cuttingTime,
         title: 'Cutting Time',
@@ -16,12 +22,6 @@ export const turningFigures = [
         href: '#pc',
         src: powerRequirements,
         title: 'Power Requirements',
-        alt: '',
-    },
-    {
-        href: '#vc',
-        src: cuttingSpeed,
-        title: 'Cutting Speed',
         alt: '',
     },
 ];

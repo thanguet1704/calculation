@@ -19,10 +19,7 @@ import { CutOffTC } from '../turning/cutting_time/cutoff/cutOffTc';
 import { CutOffT1 } from '../turning/cutting_time/cutoff/cutOffT1';
 import { CutOffT2 } from '../turning/cutting_time/cutoff/cutOffT2';
 import { PowerRequirement } from '../turning/power_requirements';
-import { CuttingSpeed } from '../turning/cutting_speed';
-import { SpindleSpeed } from '../turning/spindle_speed';
-import { FeedRate } from '../turning/feed_rate';
-import { CuttingForce } from '../turning/cutting_force';
+import { CuttingSpeedSteel } from '../turning/cutting_speed/steels';
 import pdf from '../../public/img/pdf.png';
 import file from '../../public/assets/pdf/turning/calc_pdf_m.pdf';
 import millingFilePdf from '../../public/assets/pdf/milling/calc_pdf_m.pdf'
@@ -32,14 +29,11 @@ import { millingFigures } from '../tabs/figures/milling_figures';
 import { MillingCuttingTime } from './milling/cutting_time';
 import { MillingPowerRequirement } from './milling/power_requirement';
 import { MillingCuttingSpeed } from './milling/cutting_speed';
-import { MillingSpindleSpeed } from './milling/spindle_speed';
-import { MillingFeedRate } from './milling/feed_rate';
 import { drillingFigures } from '../tabs/figures/drilling_figures';
 import { DrillingCuttingTime } from './drilling/cutting_time';
 import { DrillingPowerRequirement } from './drilling/power_requirement';
-import { DrillingCuttingSpeed } from './drilling/cutting_speed';
-import { DrillingSpindleSpeed } from './drilling/spindle_speed';
-import { DrillingFeedRate } from './drilling/feed_rate';
+import { DrillingCuttingSpeed } from './drilling/cutting_speed/index';
+import { CuttingSpeedCastSteel } from '../turning/cutting_speed/cast_steels';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -151,8 +145,14 @@ export const Calculation = (props) => {
                 </a>
             </p>
         </div>
+        <div id="vc">
+          <h2><b>1. Cutting Speed vc [m/min]<hr/></b></h2>
+          <CuttingSpeedSteel />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <CuttingSpeedCastSteel />
+        </div>
         <div id="tc">
-          <h2><b>1. Cutting Time T <sub>c</sub> [sec]<hr/></b></h2>
+          <h2><b>2. Cutting Time T <sub>c</sub> [sec]<hr/></b></h2>
           <TabMenu />
           <CuttingTimeTC />
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
@@ -174,12 +174,8 @@ export const Calculation = (props) => {
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
         </div>
         <div id="pc">
-          <h2><b>2. Power Requirements P <sub>c</sub> [kW]<hr/></b></h2>
+          <h2><b>3. Power Requirements P <sub>c</sub> [kW]<hr/></b></h2>
           <PowerRequirement />
-        </div>
-        <div id="vc">
-          <h2><b>3. Cutting Speed vc [m/min]<hr/></b></h2>
-          <CuttingSpeed />
         </div>
       </Box>
     </TabPanel>
