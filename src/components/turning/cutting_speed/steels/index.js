@@ -65,10 +65,10 @@ export const CuttingSpeedSteel = () => {
             <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <h4><b>1.1 Cutting speeds for steels at turning with cemented carbide for T = 15 min</b></h4>
                 <div style={divInputStyle}>
-                    <Selector text="Material" defaultLabel="Select Material" items={cuttingSpeeds.materials} setSelected={setselectedMaterial} setValue={setMaterialValue}/>
-                    { selectedMaterial && <Selector text="Cutting Material" defaultLabel="Select Cutting Material" items={cuttingMaterials} setSelected={setSelectedCuttingMaterial} setValue={setCuttingMaterialValue}/>}
-                    { selectedCuttingMaterial && <Selector src={ap} defaultLabel="Select ap" items={aps} setSelected={setSelectedAp} setValue={setApValue}/>}
-                    { selectedAp && <Selector src={f} defaultLabel="Select f" items={fs} setValue={setFValue} setSelected={setSelectedF}/>}
+                    <Selector text="Material" defaultLabel="Select Material" items={cuttingSpeeds.materials} setSelected={setselectedMaterial} setValue={setMaterialValue} disable={true}/>
+                    <Selector text="Cutting Material" defaultLabel="Select Cutting Material" items={cuttingMaterials} setSelected={setSelectedCuttingMaterial} setValue={setCuttingMaterialValue} disable={selectedMaterial}/>
+                    <Selector src={ap} defaultLabel="Select ap" items={aps} setSelected={setSelectedAp} setValue={setApValue} disable={selectedCuttingMaterial}/>
+                    <Selector src={f} defaultLabel="Select f" items={fs} setValue={setFValue} setSelected={setSelectedF} disable={selectedAp}/>
                 </div>
                 <Result src={wvc} result={result} unit="m/min" setValue={setResult} />
                 <br></br>

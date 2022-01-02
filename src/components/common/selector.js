@@ -19,7 +19,7 @@ const inputStyle = {
   // border: 'solid 1px #4934eb',
 };
 
-export const Selector = ({ text, src, defaultLabel, items, setSelected, setValue}) => {
+export const Selector = ({ text, src, defaultLabel, items, setSelected, setValue, disable}) => {
   const [valueSelect, setValueSelect] = React.useState();
 
   const handleChange = (event) => {
@@ -38,6 +38,7 @@ export const Selector = ({ text, src, defaultLabel, items, setSelected, setValue
             label={defaultLabel}
             onChange={handleChange}
             style={inputStyle}
+            disabled={!disable}
           >
             {items.map(item => {
                 return (
