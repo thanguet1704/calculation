@@ -8,16 +8,11 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { Figure } from './figures/index.js';
-import { TabMenu } from '../turning/tabMenu.js';
-import { CuttingTimeTC } from '../turning/cutting_time/external/cuttingTimeTc.js';
-import { CuttingTimeT1 } from '../turning/cutting_time/external/cuttingTimeT1.js';
-import { FacingTC } from '../turning/cutting_time/facing/facingtc';
-import { FacingT1 } from '../turning/cutting_time/facing/facingt1';
-import { GroovingTC } from '../turning/cutting_time/grooving/groovingtc';
-import { GroovingT1 } from '../turning/cutting_time/grooving/groovingt1';
-import { CutOffTC } from '../turning/cutting_time/cutoff/cutOffTc';
-import { CutOffT1 } from '../turning/cutting_time/cutoff/cutOffT1';
-import { CutOffT2 } from '../turning/cutting_time/cutoff/cutOffT2';
+// import { TabMenu } from '../turning/tabMenu.js';
+import { CylindricalTurning } from '../turning/cutting_time/cylindricalTurning.js';
+import { CuttingTimeT1 } from '../turning/cutting_time/cuttingTimeT1.js';
+import { FullyCylinder } from '../turning/cutting_time/facing/fullyCylinder';
+import { HollowCylinder } from '../turning/cutting_time/facing/hollowCylinder';
 import { PowerRequirement } from '../turning/power_requirements';
 import { CuttingSpeedSteel } from '../turning/cutting_speed/steels';
 import pdf from '../../public/img/pdf.png';
@@ -153,24 +148,17 @@ export const Calculation = (props) => {
         </div>
         <div id="tc">
           <h2><b>2. Cutting Time T <sub>c</sub> [sec]<hr/></b></h2>
-          <TabMenu />
-          <CuttingTimeTC />
+          {/* <TabMenu /> */}
+          <CylindricalTurning />
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <h4>
+            <b>2.2. Facing </b>
+            <FullyCylinder />
+            <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+            <HollowCylinder />
+            <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          </h4>
           <CuttingTimeT1 />
-          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
-          <FacingTC />
-          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
-          <FacingT1 />
-          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
-          <GroovingTC />
-          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
-          <GroovingT1 />
-          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
-          <CutOffTC />
-          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
-          <CutOffT1 />
-          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
-          <CutOffT2 />
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
         </div>
         <div id="pc">
