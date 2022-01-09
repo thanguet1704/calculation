@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/calculation/static/css/main.4bda7c0d.css",
-    "main.js": "/calculation/static/js/main.f1092238.js",
+    "main.js": "/calculation/static/js/main.210ebc71.js",
     "static/js/787.a135bfa6.chunk.js": "/calculation/static/js/787.a135bfa6.chunk.js",
     "static/media/calc_pdf_m.pdf": "/calculation/static/media/calc_pdf_m.a72e3a665617bf50a6f1.pdf",
     "static/media/calc_pdf_d.pdf": "/calculation/static/media/calc_pdf_d.28162ddaf33f7a198f4e.pdf",
@@ -11,16 +11,15 @@
     "static/media/m_q.png": "/calculation/static/media/m_q.3627b662bff96b469362.png",
     "static/media/d_dc.png": "/calculation/static/media/d_dc.19d109f71415c512138e.png",
     "static/media/m_dc.png": "/calculation/static/media/m_dc.19d109f71415c512138e.png",
-    "static/media/t_d3.png": "/calculation/static/media/t_d3.6724802d9e1c1dbde654.png",
-    "static/media/t_t1.png": "/calculation/static/media/t_t1.b82f025dfa357aa721f2.png",
+    "static/media/t_d.png": "/calculation/static/media/t_d.6724802d9e1c1dbde654.png",
     "static/media/t_d2.png": "/calculation/static/media/t_d2.db54b18507adec850f68.png",
     "index.html": "/calculation/index.html",
     "main.4bda7c0d.css.map": "/calculation/static/css/main.4bda7c0d.css.map",
-    "main.f1092238.js.map": "/calculation/static/js/main.f1092238.js.map",
+    "main.210ebc71.js.map": "/calculation/static/js/main.210ebc71.js.map",
     "787.a135bfa6.chunk.js.map": "/calculation/static/js/787.a135bfa6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4bda7c0d.css",
-    "static/js/main.f1092238.js"
+    "static/js/main.210ebc71.js"
   ]
 }
