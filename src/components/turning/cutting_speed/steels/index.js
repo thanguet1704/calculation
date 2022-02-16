@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
 import { Result } from '../../../common/result';
 import { Selector } from '../../../common/selector';
-import ap from '../../../../public/img/turning/cutting_speed/t_ap.png';
-import f from '../../../../public/img/turning/cutting_speed/t_f.png';
 import { cuttingSpeeds } from './data';
 
 const divInputStyle = {
@@ -63,12 +61,12 @@ export const CuttingSpeedSteel = () => {
     return (
         <form>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <h4><b>1.1 Cutting speeds for steels at turning with cemented carbide for T = 15 min</b></h4>
+                <h4><b>1.1 Tốc độ cắt của thép khi tiện với cemented carbide với T = 15 phút</b></h4>
                 <div style={divInputStyle}>
-                    <Selector text="Material" defaultLabel="Select Material" items={cuttingSpeeds.materials} setSelected={setselectedMaterial} setValue={setMaterialValue} disable={true}/>
-                    <Selector text="Cutting Material" defaultLabel="Select Cutting Material" items={cuttingMaterials} setSelected={setSelectedCuttingMaterial} setValue={setCuttingMaterialValue} disable={selectedMaterial}/>
-                    <Selector src={ap} defaultLabel="Select ap" items={aps} setSelected={setSelectedAp} setValue={setApValue} disable={selectedCuttingMaterial}/>
-                    <Selector src={f} defaultLabel="Select f" items={fs} setValue={setFValue} setSelected={setSelectedF} disable={selectedAp}/>
+                    <Selector text="Phôi" defaultLabel="Chọn Phôi" items={cuttingSpeeds.materials} setSelected={setselectedMaterial} setValue={setMaterialValue} disable={true}/>
+                    <Selector text="Vật liệu dao" defaultLabel="Chọn vật liệu dao" items={cuttingMaterials} setSelected={setSelectedCuttingMaterial} setValue={setCuttingMaterialValue} disable={selectedMaterial}/>
+                    <Selector text="Chiều sâu cắt ap(mm)" defaultLabel="Chọn chiều sâu cắt" items={aps} setSelected={setSelectedAp} setValue={setApValue} disable={selectedCuttingMaterial}/>
+                    <Selector text="Lượng chạy dao f(mm/v)" defaultLabel="Chọn lượng chạy dao" items={fs} setValue={setFValue} setSelected={setSelectedF} disable={selectedAp}/>
                 </div>
                 <Result src={wvc} result={result} unit="m/min" setValue={setResult} />
                 <br></br>

@@ -28,8 +28,6 @@ export const CuttingTimeT1 = () => {
         setReset(true);
     };
 
-    // tét
-
     return (
         <form id="tab-ex">
             <div style={{ display: 'flex', flexDirection: 'column'}}>

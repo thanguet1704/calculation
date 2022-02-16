@@ -141,7 +141,7 @@ export const Calculation = (props) => {
             </p>
         </div>
         <div id="vc">
-          <h2><b>1. Cutting Speed vc [m/min]<hr/></b></h2>
+          <h2><b>1. Tốc độ cắt vc [m/min]<hr/></b></h2>
           <CuttingSpeedSteel />
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
           <CuttingSpeedCastSteel />
