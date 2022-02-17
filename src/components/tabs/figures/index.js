@@ -23,7 +23,7 @@ export const Figure = ({ figures }) => {
         <Grid container spacing={2} style={{ width: '100%'}}>
             {figures.map(item => {
                 return (
-                    <Grid item xs={6} md={4}>
+                    <Grid item sm={4} md={3}>
                         <a href={item.href} >
                             <p style={pStyle} >
                                 <img src={item.src} alt={item.alt} style={imgStyle}/>

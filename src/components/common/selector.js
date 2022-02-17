@@ -29,7 +29,7 @@ export const Selector = ({ text, src, defaultLabel, items, setSelected, setValue
   };
 
   return (
-    <p style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'start'}}>
+    <p style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'start', paddingLeft: 20, paddingRight: 20}}>
         { text ? <b style={{ height: 40 }}>{text}</b> : <img src={src} alt="" style={imgStyle} />}
         <FormControl required>
           <InputLabel>{defaultLabel}</InputLabel>
@@ -40,7 +40,7 @@ export const Selector = ({ text, src, defaultLabel, items, setSelected, setValue
             style={inputStyle}
             disabled={!disable}
           >
-            {items.map(item => {
+            {items?.map(item => {
                 return (
                   <MenuItem value={item.value}>{item.label.trim()}</MenuItem>
                 );

@@ -1,20 +1,9 @@
 import { InputCommon } from '../../../common/input';
-import vc from '../../../../public/img/turning/cutting_time/facing/t1/t_vc.png';
-import f from '../../../../public/img/turning/cutting_time/facing/t1/t_f.png';
-import d1 from '../../../../public/img/turning/cutting_time/facing/t1/t_d1.png';
-import d2 from '../../../../public/img/turning/cutting_time/facing/t1/t_d2.png';
-import i from '../../../../public/img/turning/cutting_time/t_i.png';
 import wt1 from '../../../../public/img/w_t1.png';
 import { useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
 import { Result } from '../../../common/result';
-
-const divInputStyle = {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
-};
+import Grid from '@mui/material/Grid';
 
 export const HollowCylinder = () => {
     const [result, setResult] = useState(0);
@@ -39,14 +28,24 @@ export const HollowCylinder = () => {
     return (
         <form>
             <div style={{ display: 'flex', flexDirection: 'column'}}>
-                <h4><b>[Hollow Cylinder]</b></h4>
-                <div style={divInputStyle}>
-                    <InputCommon src={d1} placeholder="Max. Diameter" setValue={setD}/>
-                    <InputCommon src={d2} placeholder="Min. Diameter" setValue={setD1}/>
-                    <InputCommon src={i} placeholder="No.of holes" setValue={setI}/>
-                    <InputCommon src={f} placeholder="Feed Rate" setValue={setF}/>
-                    <InputCommon src={vc} placeholder="Cutting Speed" setValue={setVc}/>
-                </div>
+                <h4><b>[Trụ rỗng]</b></h4>
+                <Grid container spacing={2}>
+                    <Grid item xs={12} xl={3} lg={4}> 
+                        <InputCommon text="Số lần cắt: i" placeholder="Nhập thông số" setValue={setD}/>
+                    </Grid>
+                    <Grid item xs={12} xl={3} lg={4}>
+                        <InputCommon text="Đường kính ngoài: D(mm)" placeholder="Nhập thông số"setValue={setD1}/>
+                    </Grid>
+                    <Grid item xs={12} xl={3} lg={4}>  
+                        <InputCommon text="Đường kính trong: d(mm)" placeholder="Nhập thông số" setValue={setI}/>
+                    </Grid>
+                    <Grid item xs={12} xl={3} lg={4}>
+                        <InputCommon text="Lượng chạy dao: f(mm)" placeholder="Nhập thông số" setValue={setF}/>
+                    </Grid>
+                    <Grid item xs={12} xl={3} lg={4}>
+                        <InputCommon text="Tốc độ cắt: vc(m/ph)" placeholder="Nhập thông số" setValue={setVc}/>
+                    </Grid>
+                </Grid>
                 <Result src={wt1} result={result} unit="sec" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>

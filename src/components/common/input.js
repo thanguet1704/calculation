@@ -14,14 +14,14 @@ const imgStyle = {
     height: 40
 };
 
-export const InputCommon = ({ src, placeholder, setValue }) => {
+export const InputCommon = ({ src, placeholder, setValue, text }) => {
     const handleOnChange = (e) => {
         setValue(e.target.value);
     }
 
     return (
-        <p>
-            <img src={src} alt="" style={imgStyle} />
+        <p style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'start', paddingLeft: 20, paddingRight: 20}}>
+           { text ? <b style={{ height: 40 }}>{text}</b> : <img src={src} alt="" style={imgStyle} />}
             <input type="number" placeholder={placeholder} inputmode="decimal" style={inputStyle} onChange={handleOnChange}/>
         </p>
     );

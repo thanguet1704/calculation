@@ -1,12 +1,9 @@
 import { InputCommon } from '../../../common/input';
-import i from '../../../../public/img/turning/cutting_time/t_i.png';
-import f from '../../../../public/img/turning/cutting_time/facing/tc/t_f.png';
-import d from '../../../../public/img/turning/cutting_time/facing/tc/t_d1.png';
-import vc from '../../../../public/img/turning/cutting_time/t_vc.png';
 import wtc from '../../../../public/img/w_tc.png';
 import { useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
 import { Result } from '../../../common/result';
+import Grid from '@mui/material/Grid';
 
 const divInputStyle = {
     width: '100%',
@@ -36,12 +33,22 @@ export const FullyCylinder = () => {
     return (
         <form id="tab-fa">
             <div style={{ display: 'flex', flexDirection: 'column'}}>
-                <h4><b>[Fully Cylinder]</b></h4>
+                <h4><b>[Trụ đặc]</b></h4>
                 <div style={divInputStyle}>
-                    <InputCommon src={i} placeholder="No.of holes" setValue={setI}/>
-                    <InputCommon src={d} placeholder="Diameter" setValue={setD}/>
-                    <InputCommon src={f} placeholder="Feed Rate" setValue={setF}/>
-                    <InputCommon src={vc} placeholder="Cutting Speed" setValue={setVc}/>
+                <Grid container spacing={2}>
+                    <Grid item xs={12} xl={3} lg={4}> 
+                        <InputCommon text="Số lần cắt: i" placeholder="Nhập thông số" setValue={setI}/>
+                    </Grid>
+                    <Grid item xs={12} xl={3} lg={4}>
+                        <InputCommon text="Đường kính phôi: D(mm)" placeholder="Nhập thông số"setValue={setD}/>
+                    </Grid>
+                    <Grid item xs={12} xl={3} lg={4}>  
+                        <InputCommon text="Lượng chạy dao: f(mm)" placeholder="Nhập thông số" setValue={setF}/>
+                    </Grid>
+                    <Grid item xs={12} xl={3} lg={4}>
+                        <InputCommon text="Tốc độ cắt: vc(m/ph)" placeholder="Nhập thông số" setValue={setVc}/>
+                    </Grid>
+                </Grid>
                 </div>
                 <Result src={wtc} result={result} unit="sec" setValue={setResult} />
                 <br></br>

@@ -4,13 +4,7 @@ import Button from '@mui/material/Button';
 import { Result } from '../../../common/result';
 import { Selector } from '../../../common/selector';
 import { cuttingSpeeds } from './data';
-
-const divInputStyle = {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
-};
+import Grid from '@mui/material/Grid';
 
 export const CuttingSpeedSteel = () => {
     const [result, setResult] = useState();
@@ -62,12 +56,20 @@ export const CuttingSpeedSteel = () => {
         <form>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <h4><b>1.1 Tốc độ cắt của thép khi tiện với cemented carbide với T = 15 phút</b></h4>
-                <div style={divInputStyle}>
-                    <Selector text="Phôi" defaultLabel="Chọn Phôi" items={cuttingSpeeds.materials} setSelected={setselectedMaterial} setValue={setMaterialValue} disable={true}/>
-                    <Selector text="Vật liệu dao" defaultLabel="Chọn vật liệu dao" items={cuttingMaterials} setSelected={setSelectedCuttingMaterial} setValue={setCuttingMaterialValue} disable={selectedMaterial}/>
-                    <Selector text="Chiều sâu cắt ap(mm)" defaultLabel="Chọn chiều sâu cắt" items={aps} setSelected={setSelectedAp} setValue={setApValue} disable={selectedCuttingMaterial}/>
-                    <Selector text="Lượng chạy dao f(mm/v)" defaultLabel="Chọn lượng chạy dao" items={fs} setValue={setFValue} setSelected={setSelectedF} disable={selectedAp}/>
-                </div>
+                <Grid container spacing={2}>
+                    <Grid item xs={12} xl={3} lg={4}> 
+                        <Selector text="Phôi" defaultLabel="Chọn Phôi" items={cuttingSpeeds.materials} setSelected={setselectedMaterial} setValue={setMaterialValue} disable={true}/>
+                    </Grid>
+                    <Grid item xs={12} xl={3} lg={4}>
+                        <Selector text="Vật liệu dao" defaultLabel="Chọn vật liệu dao" items={cuttingMaterials} setSelected={setSelectedCuttingMaterial} setValue={setCuttingMaterialValue} disable={selectedMaterial}/>
+                    </Grid>
+                    <Grid item xs={12} xl={3} lg={4}>  
+                        <Selector text="Chiều sâu cắt ap(mm)" defaultLabel="Chọn chiều sâu cắt" items={aps} setSelected={setSelectedAp} setValue={setApValue} disable={selectedCuttingMaterial}/>
+                    </Grid>
+                    <Grid item xs={12} xl={3} lg={4}>
+                        <Selector text="Lượng chạy dao f(mm/v)" defaultLabel="Chọn lượng chạy dao" items={fs} setValue={setFValue} setSelected={setSelectedF} disable={selectedAp}/>
+                    </Grid>
+                </Grid>
                 <Result src={wvc} result={result} unit="m/min" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>

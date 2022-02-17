@@ -29,6 +29,7 @@ import { DrillingCuttingTime } from './drilling/cutting_time';
 import { DrillingPowerRequirement } from './drilling/power_requirement';
 import { DrillingCuttingSpeed } from './drilling/cutting_speed/index';
 import { CuttingSpeedCastSteel } from '../turning/cutting_speed/cast_steels';
+import { PowerCut } from '../turning/power_cut';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -147,12 +148,12 @@ export const Calculation = (props) => {
           <CuttingSpeedCastSteel />
         </div>
         <div id="tc">
-          <h2><b>2. Cutting Time T <sub>c</sub> [sec]<hr/></b></h2>
+          <h2><b>2. Thời gian gia công T<sub>c</sub> [sec]<hr/></b></h2>
           {/* <TabMenu /> */}
           <CylindricalTurning />
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
           <h4>
-            <b>2.2. Facing </b>
+            <b>2.2. Tiện mặt đầu </b>
             <FullyCylinder />
             <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
             <HollowCylinder />
@@ -161,8 +162,12 @@ export const Calculation = (props) => {
           <CuttingTimeT1 />
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
         </div>
+        <div id="fc">
+          <h2><b>3. Lực cắt chính: F<sub>c</sub> [kW]<hr/></b></h2>
+          <PowerCut />
+        </div>
         <div id="pc">
-          <h2><b>3. Power Requirements P <sub>c</sub> [kW]<hr/></b></h2>
+          <h2><b>4. Công suất yêu cầu: P<sub>c</sub> [kW]<hr/></b></h2>
           <PowerRequirement />
         </div>
       </Box>
@@ -183,7 +188,7 @@ export const Calculation = (props) => {
           <MillingCuttingTime />
         </div>
         <div id="pc">
-          <h2><b>2. Power Requirements P <sub>c</sub> [kW]<hr/></b></h2>
+          <h2><b>2. Công suất yêu cầu: P <sub>c</sub> [kW]<hr/></b></h2>
           <MillingPowerRequirement />
         </div>
         <div id="vc">
@@ -208,7 +213,7 @@ export const Calculation = (props) => {
           <DrillingCuttingTime />
         </div>
         <div id="pc">
-          <h2><b>2. Power Requirements P <sub>c</sub> [kW]<hr/></b></h2>
+          <h2><b>2. Công suất yêu cầu: P <sub>c</sub> [kW]<hr/></b></h2>
           <DrillingPowerRequirement />
         </div>
         <div id="vc">
