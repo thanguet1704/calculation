@@ -1,6 +1,6 @@
 const resultStyle = {
     height: 45,
-    width: '50%',
+    width: '70%',
     fontSize: '1rem',
     textAlign: 'right',
     backgroundColor: '#6786ff',
