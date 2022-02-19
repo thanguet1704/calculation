@@ -7,6 +7,8 @@ const inputStyle = {
     borderRadius: 5,
     borderColor: COLOR_INPUT_BORDER,
     textAlign: 'right',
+    paddingRight: 10,
+    boxSizing: 'border-box',
 };
 
 const imgStyle = {

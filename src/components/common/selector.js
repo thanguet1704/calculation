@@ -11,9 +11,7 @@ const imgStyle = {
 };
 
 const inputStyle = {
-  minWidth: 304,
-  maxWidth: 304,
-  height: 45,
+  height: 40,
   borderRadius: 5,
   textAlign: 'right',
   // border: 'solid 1px #4934eb',
@@ -31,7 +29,7 @@ export const Selector = ({ text, src, defaultLabel, items, setSelected, setValue
   return (
     <p style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'start', paddingLeft: 20, paddingRight: 20}}>
         { text ? <b style={{ height: 40 }}>{text}</b> : <img src={src} alt="" style={imgStyle} />}
-        <FormControl required>
+        <FormControl  fullWidth>
           <InputLabel>{defaultLabel}</InputLabel>
           <Select
             value={valueSelect}
