@@ -24,9 +24,8 @@ export const Selector = ({ text, src, defaultLabel, items, setSelected, setValue
 
   const handleChange = (event) => {
     setValueSelect(event.target.value);
-    // setSelected(true);
+    setSelected(true);
     setValue(event.target.value);
-    console.log('----')
   };
 
   return (
