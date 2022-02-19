@@ -13,9 +13,11 @@ const imgStyle = {
 
 const pStyle = {
     display: 'flex',
-    flexDirection: 'column', 
+    flexDirection: 'column',
     alignItems: 'center',
     textAlign: 'center',
+    color: 'rgb(103, 134, 255)',
+    fontWeight: 'bold',
 };
 
 export const Figure = ({ figures }) => {

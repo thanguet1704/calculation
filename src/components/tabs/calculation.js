@@ -71,6 +71,7 @@ const iconTabStyle = {
 
 const pdfStyle = {
   fontSize: '90%',
+  color: 'rgb(103, 134, 255)'
 };
 
 const iconStyle = {
