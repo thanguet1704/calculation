@@ -86,7 +86,7 @@ const floatButtonStyle = {
   right: '1em',
   display: 'flex',
   justifyContent: 'center',
-  backgroundColor: 'rgb(0, 76, 49)',
+  backgroundColor: 'rgb(89, 227, 179)',
   color: '#fff',
 };
 
