@@ -30,6 +30,14 @@ import { DrillingPowerRequirement } from './drilling/power_requirement';
 import { DrillingCuttingSpeed } from './drilling/cutting_speed/index';
 import { CuttingSpeedCastSteel } from '../turning/cutting_speed/cast_steels';
 import { PowerCut } from '../turning/power_cut';
+import { Edge } from './milling/cutting_time/edge';
+import { SelectWidth } from './milling/power_requirement/select_width';
+import { CutSpeed } from './milling/power_requirement/cut_speed';
+import { PhayTho } from './milling/proccessing_time/phay_tho';
+import { PhayTinh } from './milling/proccessing_time/phay_tinh';
+import { PhayChuVi } from './milling/proccessing_time/phay_chu_vi';
+import { PhayTinh2 } from './milling/proccessing_time/phay_tinh_2';
+import { PhayRanh } from './milling/proccessing_time/phay_ranh';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -87,8 +95,9 @@ const floatButtonStyle = {
   right: '1em',
   display: 'flex',
   justifyContent: 'center',
-  backgroundColor: 'rgb(89, 227, 179)',
-  color: '#fff',
+  backgroundColor: '#EDAEF9',
+  color: '#000',
+  fontWeight: 'bold',
 };
 
 export const Calculation = (props) => {
@@ -99,19 +108,19 @@ export const Calculation = (props) => {
     switch (value) {
       case 1: {
         setValue(1);
-        setTitle('Milling');
+        setTitle('Phay');
         break;
       }
 
       case 2: {
         setValue(2);
-        setTitle('Drilling');
+        setTitle('Khoan');
         break;
       }
     
       default: {
         setValue(0);
-        setTitle('Turning');
+        setTitle('Tiện');
         break;
       }
     }
@@ -126,9 +135,9 @@ export const Calculation = (props) => {
     </div>
     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
       <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-        <Tab icon={<img src={appTurning} alt="" style={iconTabStyle}/>} label="Turning" {...a11yProps(0)} />
-        <Tab icon={<img src={appMilling} alt="" style={iconTabStyle}/>} label="Milling" {...a11yProps(1)} />
-        <Tab icon={<img src={appDrilling} alt="" style={iconTabStyle}/>} label="Drilling" {...a11yProps(2)} />
+        <Tab icon={<img src={appTurning} alt="" style={iconTabStyle}/>} label="Tiện" {...a11yProps(0)} />
+        <Tab icon={<img src={appMilling} alt="" style={iconTabStyle}/>} label="Phay" {...a11yProps(1)} />
+        <Tab icon={<img src={appDrilling} alt="" style={iconTabStyle}/>} label="Khoan" {...a11yProps(2)} />
       </Tabs>
     </Box>
     <TabPanel value={value} index={0}>
@@ -185,16 +194,34 @@ export const Calculation = (props) => {
             </p>
         </div>
         <div id="tc">
-          <h2><b>1. Cutting Time T <sub>c</sub> [sec]<hr/></b></h2>
+          <h2><b>1. Chọn dao</b></h2>
           <MillingCuttingTime />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <Edge />
         </div>
         <div id="pc">
-          <h2><b>2. Công suất yêu cầu: P <sub>c</sub> [kW]<hr/></b></h2>
+          <h2><b>2. Tra tốc độ cắt, lượng chạy dao răng và thông số hình học dao.</b></h2>
+          <SelectWidth />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
           <MillingPowerRequirement />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <CutSpeed />
         </div>
         <div id="vc">
-          <h2><b>3. Cutting Speed vc [m/min]<hr/></b></h2>
+          <h2><b>3. Công suất yêu cầu.<hr/></b></h2>
           <MillingCuttingSpeed />
+        </div>
+        <div id="pt">
+          <h2><b>4. Thời gian gia công.<hr/></b></h2>
+          <PhayChuVi />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <PhayTho />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <PhayTinh />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <PhayTinh2 />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <PhayRanh />
         </div>
       </Box>
     </TabPanel>
@@ -210,7 +237,7 @@ export const Calculation = (props) => {
             </p>
         </div>
         <div id="tc">
-          <h2><b>1. Cutting Time T <sub>c</sub> [sec]<hr/></b></h2>
+          <h2><b>1. Chọn dao</b></h2>
           <DrillingCuttingTime />
         </div>
         <div id="pc">

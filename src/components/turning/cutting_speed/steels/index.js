@@ -5,6 +5,7 @@ import { Result } from '../../../common/result';
 import { Selector } from '../../../common/selector';
 import { cuttingSpeeds } from './data';
 import Grid from '@mui/material/Grid';
+import Tooltip from '@mui/material/Tooltip';
 
 export const CuttingSpeedSteel = () => {
     const [result, setResult] = useState();
@@ -56,6 +57,9 @@ export const CuttingSpeedSteel = () => {
         <form>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <h4><b>1.1 Tốc độ cắt của thép khi tiện với cemented carbide với T = 15 phút</b></h4>
+                <Tooltip title="Delete" style={{ textAlign: 'center' }}>
+                    <h5>Table 7.10 Tốc độ cắt và lượng chạy dao khi tiện với vật liệu dao ceramic</h5>
+                </Tooltip>
                 <Grid container spacing={2}>
                     <Grid item xs={12} xl={3} lg={4}> 
                         <Selector text="Phôi" defaultLabel="Chọn Phôi" items={cuttingSpeeds.materials} setSelected={setselectedMaterial} setValue={setMaterialValue} disable={true}/>

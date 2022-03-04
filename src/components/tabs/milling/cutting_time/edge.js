@@ -5,10 +5,12 @@ import Button from '@mui/material/Button';
 import { Result } from '../../../common/result';
 import Grid from '@mui/material/Grid';
 
-export const MillingCuttingTime = () => {
+export const Edge = () => {
     const [result, setResult] = useState(0);
-    const [n, setN] = useState(0);
-    const [f, setF] = useState(0);
+    const [p, setP] = useState(0);
+    const [d, setD] = useState(0);
+    const [a, setA] = useState(0);
+    const [g, setG] = useState(0);
     const [l, setL] = useState(0);
     const [r, setReset] = useState(false);
 
@@ -20,16 +22,22 @@ export const MillingCuttingTime = () => {
     return (
         <form>
             <div style={{ display: 'flex', flexDirection: 'column'}}>
-                <h4><b>1.1. Đường kính dao và số lưỡi cắt của một số loại dao phay đơn thép gió.</b></h4>
+            <h4><b>1.2. Góc sau, góc trước, góc xoắn của một số dao phay thép gió (<sup>0</sup>)</b></h4>
                 <Grid container spacing={2}>
                     <Grid item xs={12} xl={4} lg={6}> 
-                        <InputCommon text="Kiểu dao" placeholder="Nhập thông số" setValue={setL}/>
+                        <InputCommon text="Phôi" placeholder="Nhập thông số" setValue={setP}/>
                     </Grid>
                     <Grid item xs={12} xl={4} lg={6}>
-                        <InputCommon text="Loại dao" placeholder="Nhập thông số" setValue={setL}/>
+                        <InputCommon text="Loại dao" placeholder="Nhập thông số" setValue={setD}/>
                     </Grid>
                     <Grid item xs={12} xl={4} lg={6}>  
-                        <InputCommon text="Đường kính dao" placeholder="Nhập thông số" setValue={setL}/>
+                        <InputCommon text="Góc sau a" placeholder="Nhập thông số" setValue={setA}/>
+                    </Grid>
+                    <Grid item xs={12} xl={4} lg={6}>  
+                        <InputCommon text="Góc trước g" placeholder="Nhập thông số" setValue={setG}/>
+                    </Grid>
+                    <Grid item xs={12} xl={4} lg={6}>  
+                        <InputCommon text="Góc xoắn" placeholder="Nhập thông số" setValue={setL}/>
                     </Grid>
                 </Grid>
                 <Result src={wtc} result={result} unit="sec" setValue={setResult} />

@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import { Result } from '../../../common/result';
 import Grid from '@mui/material/Grid';
 
-export const MillingPowerRequirement = () => {
+export const SelectWidth = () => {
     const [result, setResult] = useState(0);
     const [p, setP] = useState(0);
     const [m, setM] = useState(0);
@@ -23,7 +23,8 @@ export const MillingPowerRequirement = () => {
     return (
         <form>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <h4><b>2.2. Chọn chiều rộng dao phay (Dao phay rãnh dạng đĩa) hoặc đường kính dao phay (dao phay ngón).</b></h4>
+                <h4><b>2.1. Chọn lượng chạy dao răng và tốc độ cắt cho phép với chiều sâu cắt a<sub>p</sub> = 8mm cho phay thô và chiều sâu cắt a<sub>p</sub> = 1mm 
+                    cho phay tinh với dao phay mặt phẳng và dao phay mặt phẳng bù trực giao</b></h4>
                 <Grid container spacing={2}>
                     <Grid item xs={12} xl={4} lg={6}> 
                         <InputCommon text="Phôi" placeholder="Nhập thông số" setValue={setP}/>
@@ -35,13 +36,13 @@ export const MillingPowerRequirement = () => {
                         <InputCommon text="Dao" placeholder="Nhập thông số" setValue={setD}/>
                     </Grid>
                     <Grid item xs={12} xl={4} lg={6}>  
-                        <InputCommon text="Lượng chạy dao răng" placeholder="Nhập thông số" setValue={setL}/>
+                        <InputCommon text="Lượng chạy dao răngo" placeholder="Nhập thông số" setValue={setL}/>
                     </Grid>
                     <Grid item xs={12} xl={4} lg={6}>  
-                        <InputCommon text="Tốc độ cắt (Dao phay rãnh dạng đĩa)" placeholder="Nhập thông số" setValue={setPt}/>
+                        <InputCommon text="Tốc độ cắt (phay thô)" placeholder="Nhập thông số" setValue={setPt}/>
                     </Grid>
                     <Grid item xs={12} xl={4} lg={6}>  
-                        <InputCommon text="Tốc độ cắt (Dao phay ngón)" placeholder="Nhập thông số" setValue={setPt2}/>
+                        <InputCommon text="Tốc độ cắt (phay tinh)" placeholder="Nhập thông số" setValue={setPt2}/>
                     </Grid>
                 </Grid>
                 <Result src={wpc} result={result} unit="kW" setValue={setResult} />

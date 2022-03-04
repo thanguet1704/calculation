@@ -8,7 +8,7 @@ const imgStyle = {
     maxWidth: 150,
     height: 'auto',
     verticalAlign: 'middle',
-    backgroundColor: '#FFFBDB',
+    backgroundColor: '#edaef9',
 };
 
 const pStyle = {

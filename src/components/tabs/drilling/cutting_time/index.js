@@ -1,20 +1,9 @@
 import { InputCommon } from '../../../common/input';
-import vc from '../../../../public/img/milling/cutting_time/m_vc.png';
-import f from '../../../../public/img/drilling/cutting_time/d_f.png';
-import h from '../../../../public/img/drilling/cutting_time/d_h_mm.png';
-import dc from '../../../../public/img/milling/cutting_time/m_dc.png';
-import i from '../../../../public/img/drilling/cutting_time/d_i.png';
 import wtc from '../../../../public/img/w_tc.png';
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 import { Result } from '../../../common/result';
-
-const divInputStyle = {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
-};
+import Grid from '@mui/material/Grid';
 
 export const DrillingCuttingTime = () => {
     const [result, setResult] = useState(0);
@@ -31,13 +20,18 @@ export const DrillingCuttingTime = () => {
     return (
         <form>
             <div style={{ display: 'flex', flexDirection: 'column'}}>
-                <div style={divInputStyle}>
-                    <InputCommon src={vc} placeholder="Cutting Speed" setValue={setN}/>
-                    <InputCommon src={f} placeholder="Feed Rate per Revolution" setValue={setF}/>
-                    <InputCommon src={h} placeholder="Depth of Hole" setValue={setL}/>
-                    <InputCommon src={i} placeholder="No.of holes" setValue={setL}/>
-                    <InputCommon src={dc} placeholder="Diameter" setValue={setL}/>
-                </div>
+                <h4><b>1.1. Đường kính dao và số lưỡi cắt của một số loại dao phay đơn thép gió.</b></h4>
+                <Grid container spacing={2}>
+                    <Grid item xs={12} xl={3} lg={4}> 
+                        <InputCommon text="Kiểu dao" placeholder="Nhập thông số" setValue={setL}/>
+                    </Grid>
+                    <Grid item xs={12} xl={3} lg={4}>
+                        <InputCommon text="Loại dao" placeholder="Nhập thông số" setValue={setL}/>
+                    </Grid>
+                    <Grid item xs={12} xl={3} lg={4}>  
+                        <InputCommon text="Đường kính dao" placeholder="Nhập thông số" setValue={setL}/>
+                    </Grid>
+                </Grid>
                 <Result src={wtc} result={result} unit="sec" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
