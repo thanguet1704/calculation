@@ -1,20 +1,23 @@
-import { COLOR_INPUT_BORDER } from '../common/color';
+import '../../../src/index.css';
 
 const inputStyle = {
     width: '100%',
-    height: 40,
-    // backgroundColor: '#EEE',
-    borderRadius: 5,
-    borderColor: COLOR_INPUT_BORDER,
-    textAlign: 'right',
-    paddingRight: 10,
+    height: 50,
+    borderRadius: 4,
     boxSizing: 'border-box',
+    position: "relative",
+    border: "2px solid #ced4da",
+    fontSize: 16,
+    padding: "10px 26px 10px 12px",
+    borderColor: "#80bdff",
+    textAlign: 'right',
 };
 
 const imgStyle = {
     width: 'auto',
     height: 40
 };
+
 
 export const InputCommon = ({ src, placeholder, setValue, text, disable, defaultValue }) => {
     const handleOnChange = (e) => {
@@ -24,7 +27,14 @@ export const InputCommon = ({ src, placeholder, setValue, text, disable, default
     return (
         <p style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'start', paddingLeft: 20, paddingRight: 20}}>
            { text ? <b style={{ height: 40 }}>{text}</b> : <img src={src} alt="" style={imgStyle} />}
-            <input type="number" placeholder={placeholder} inputmode="decimal" style={inputStyle} onChange={handleOnChange} disabled={disable} value={defaultValue}/>
+            <input class="input-focus" 
+                type="number" 
+                placeholder={placeholder} 
+                inputmode="decimal" 
+                style={inputStyle} 
+                onChange={handleOnChange}
+                disabled={disable} 
+                value={defaultValue}/>
         </p>
     );
 };

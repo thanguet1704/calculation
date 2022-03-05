@@ -2,7 +2,7 @@ import Grid from '@mui/material/Grid';
 
 const imgStyle = {
     padding: '0 5px',
-    border: '1px solid #cccccc',
+    border: '2px solid #edaef9',
     borderRadius: '10px',
     boxSizing: 'border-box',
     maxWidth: 150,

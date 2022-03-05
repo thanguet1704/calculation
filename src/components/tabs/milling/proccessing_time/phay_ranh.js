@@ -24,7 +24,7 @@ export const PhayRanh = () => {
     useEffect(() => {
         const th = ((t + 2) * i) / (f1 * n) + ((l - d) * i) / (f2 * n);
         setResult(th);
-    }, [l, d, i, f1, f2, t])
+    }, [l, d, i, f1, f2, t, n])
 
     return (
         <form>
