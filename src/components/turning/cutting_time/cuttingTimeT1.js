@@ -89,6 +89,7 @@ export const CuttingTimeT1 = () => {
 
     const handleOnClick = () => {
         setResult(0);
+        document.getElementById('tab-ex').reset();
         setReset(true);
     };
 

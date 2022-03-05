@@ -32,3 +32,26 @@ input[type=number] {
   border-color: "#80bdff";
   box-shadow: "0 0 0 0.2rem rgba(0,123,255,.25)";
 }
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+td {
+  font-weight: initial;
+}
+
+.up-down {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

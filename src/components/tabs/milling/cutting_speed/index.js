@@ -26,6 +26,7 @@ export const MillingCuttingSpeed = () => {
 
     const handleOnClick = () => {
         setResult(0);
+        document.getElementById('phay3').reset();
         setReset(true);
     };
 
@@ -36,7 +37,7 @@ export const MillingCuttingSpeed = () => {
     }, [b, kc, kver, kst, kv, kg, vc, p, n, n2, z, b2, d, fz, p2]);
 
     return (
-        <form>
+        <form id="phay3">
             <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <Grid container spacing={2} style={{ width: '100%' }}>
                     <Grid item sm={12} md={6} xl={3} lg={4}>

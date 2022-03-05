@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
 import { Result } from '../../common/result';
 import Grid from '@mui/material/Grid';
+import { Table713 } from '../../tables/713';
 
 const divInputStyle = {
     width: '100%',
@@ -23,12 +24,9 @@ export const CylindricalTurning = () => {
 
     const handleOnClick = () => {
         setResult(0);
+        document.getElementById('2.1').reset();
         setReset(true);
     };
-
-    const handleOnReset = (event) => {
-        event.target.value = '';
-    }
 
     useEffect(() => {
         const cylindrical = (((lValue + 4) * iValue * Math.PI * dValue ) / (fValue * vcValue * 10 * 10 * 10)).toFixed(2);
@@ -36,7 +34,7 @@ export const CylindricalTurning = () => {
     }, [lValue, iValue, dValue, fValue, vcValue]);
 
     return (
-        <form>
+        <form id="2.1">
             <div style={{ display: 'flex', flexDirection: 'column'}}>
                 <h4><b>2.1. Tiện mặt trụ </b></h4>
                 <div style={divInputStyle}>
@@ -61,6 +59,9 @@ export const CylindricalTurning = () => {
                 <Result src={wtc} result={result} unit="sec" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
+            </div>
+            <div style={{ width: '100%', textAlign: 'center',}}>
+                <Table713 />
             </div>
         </form>
     );

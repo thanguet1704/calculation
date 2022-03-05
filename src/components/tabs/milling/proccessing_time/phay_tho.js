@@ -17,6 +17,7 @@ export const PhayTho = () => {
 
     const handleOnClick = () => {
         setResult(0);
+        document.getElementById('phay4.2').reset();
         setReset(true);
     };
 
@@ -27,7 +28,7 @@ export const PhayTho = () => {
     }, [l, d, a, i, f, n])
 
     return (
-        <form>
+        <form id="phay4.2">
             <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <h4><b>4.2 Phay thô</b></h4>
                 <Grid container spacing={2}>

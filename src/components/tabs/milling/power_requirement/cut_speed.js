@@ -17,11 +17,12 @@ export const CutSpeed = () => {
 
     const handleOnClick = () => {
         setResult(0);
+        document.getElementById('phay2.3').reset();
         setReset(true);
     };
 
     return (
-        <form>
+        <form id="phay2.3">
             <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <h4><b>2.3. Tốc độ cắt V<sub>c</sub> (m/ph), lượng chạy dao răng f<sub>z</sub> (mm/răng) và thông số hình học dao làm từ cemented carbide. 
                     Giá trị khi tiện thô tương ứng với chiều sâu cắt a = 10mm.</b></h4>

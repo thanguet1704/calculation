@@ -22,6 +22,7 @@ export const PowerRequirement = () => {
 
     const handleOnClick = () => {
         setResult(0);
+        document.getElementById('tien4').reset();
         setReset(true);
     };
 
@@ -31,7 +32,7 @@ export const PowerRequirement = () => {
     }, [vc, fc, nm]);
 
     return (
-        <form>
+        <form id="tien4">
             <div style={{ display: 'flex', flexDirection: 'column' }}>
             <Grid container spacing={2}>
                     <Grid item xs={12} lg={4}> 

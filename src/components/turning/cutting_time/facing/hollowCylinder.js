@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
 import { Result } from '../../../common/result';
 import Grid from '@mui/material/Grid';
+import { Table714 } from '../../../tables/714';
 
 export const HollowCylinder = () => {
     const [result, setResult] = useState(0);
@@ -16,6 +17,7 @@ export const HollowCylinder = () => {
 
     const handleOnClick = () => {
         setResult(0);
+        document.getElementById('rong').reset();
         setReset(true);
     };
 
@@ -26,7 +28,7 @@ export const HollowCylinder = () => {
     }, [dValue, d1Value, iValue, fValue, vcValue]);
 
     return (
-        <form>
+        <form id="rong">
             <div style={{ display: 'flex', flexDirection: 'column'}}>
                 <h4><b>[Trụ rỗng]</b></h4>
                 <Grid container spacing={2}>
@@ -49,6 +51,9 @@ export const HollowCylinder = () => {
                 <Result src={wt1} result={result} unit="sec" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
+                <div style={{ width: '100%', textAlign: 'center',}}>
+                    <Table714 />
+            </div>
             </div>
         </form>
     );

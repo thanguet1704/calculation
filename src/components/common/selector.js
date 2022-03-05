@@ -49,7 +49,6 @@ export const Selector = ({ text, src, defaultLabel, items, setSelected, setValue
     <p style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'start', paddingLeft: 20, paddingRight: 20}}>
         { text ? <b style={{ height: 40 }}>{text}</b> : <img src={src} alt="" style={imgStyle} />}
         <FormControl  fullWidth>
-          {/* <InputLabel>{defaultLabel}</InputLabel> */}
           <Select
             value={valueSelect}
             label={defaultLabel}

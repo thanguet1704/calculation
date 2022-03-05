@@ -16,11 +16,12 @@ export const Edge = () => {
 
     const handleOnClick = () => {
         setResult(0);
+        document.getElementById('phay1.2').reset();
         setReset(true);
     };
 
     return (
-        <form>
+        <form id="phay1.2">
             <div style={{ display: 'flex', flexDirection: 'column'}}>
             <h4><b>1.2. Góc sau, góc trước, góc xoắn của một số dao phay thép gió (<sup>0</sup>)</b></h4>
                 <Grid container spacing={2}>

@@ -23,6 +23,7 @@ export const PowerCut = () => {
 
     const handleOnClick = () => {
         setResult(0);
+        document.getElementById('tien3').reset();
         setReset(true);
     };
 
@@ -32,7 +33,7 @@ export const PowerCut = () => {
     }, [ap, f, kc, a, yt, y0, kv, kst, z]);
 
     return (
-        <form>
+        <form id="tien3">
             <div style={{ display: 'flex', flexDirection: 'column' }}>
             <Grid container spacing={2}>
                     <Grid item xs={12} xl={3} lg={4}> 

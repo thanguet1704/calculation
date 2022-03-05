@@ -5,6 +5,7 @@ import { Result } from '../../../common/result';
 import { Selector } from '../../../common/selector';
 import { cuttingSpeeds } from './data';
 import Grid from '@mui/material/Grid';
+import { Table711 } from '../../../tables/711';
 
 export const CuttingSpeedCastSteel = () => {
     const [result, setResult] = useState();
@@ -73,6 +74,9 @@ export const CuttingSpeedCastSteel = () => {
                 <Result src={wvc} result={result} unit="m/min" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
+            </div>
+            <div style={{ width: '100%', textAlign: 'center',}}>
+                <Table711 />
             </div>
         </form>
     );

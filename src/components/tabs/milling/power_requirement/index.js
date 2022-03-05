@@ -17,11 +17,12 @@ export const MillingPowerRequirement = () => {
 
     const handleOnClick = () => {
         setResult(0);
+        document.getElementById('phay2.2').reset();
         setReset(true);
     };
 
     return (
-        <form>
+        <form id="phay2.2">
             <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <h4><b>2.2. Chọn chiều rộng dao phay (Dao phay rãnh dạng đĩa) hoặc đường kính dao phay (dao phay ngón).</b></h4>
                 <Grid container spacing={2}>

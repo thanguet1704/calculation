@@ -14,11 +14,12 @@ export const DrillingCuttingTime = () => {
 
     const handleOnClick = () => {
         setResult(0);
+        document.getElementById('phay1.1#1').reset();
         setReset(true);
     };
 
     return (
-        <form>
+        <form id="phay1.1#1">
             <div style={{ display: 'flex', flexDirection: 'column'}}>
                 <h4><b>1.1. Đường kính dao và số lưỡi cắt của một số loại dao phay đơn thép gió.</b></h4>
                 <Grid container spacing={2}>

@@ -17,11 +17,12 @@ export const SelectWidth = () => {
 
     const handleOnClick = () => {
         setResult(0);
+        document.getElementById('phay2.1').reset();
         setReset(true);
     };
 
     return (
-        <form>
+        <form id="phay2.1">
             <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <h4><b>2.1. Chọn lượng chạy dao răng và tốc độ cắt cho phép với chiều sâu cắt a<sub>p</sub> = 8mm cho phay thô và chiều sâu cắt a<sub>p</sub> = 1mm 
                     cho phay tinh với dao phay mặt phẳng và dao phay mặt phẳng bù trực giao</b></h4>
