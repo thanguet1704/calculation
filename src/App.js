@@ -13,7 +13,7 @@ function HomeIcon(props) {
 
 
 function App() {
-  const [title, setTitle] = useState('Turning');
+  const [title, setTitle] = useState('Tiện');
 
   return (
     <div className="App">
