@@ -55,3 +55,8 @@ td {
   justify-content: center;
   align-items: center;
 }
+
+.up-down:hover {
+  cursor: pointer;
+  color: #c7c9c8;
+}
