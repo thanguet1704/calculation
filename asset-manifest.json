@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/calculation/static/css/main.b397fc6c.css",
-    "main.js": "/calculation/static/js/main.7976cb3c.js",
+    "main.js": "/calculation/static/js/main.323a6e33.js",
     "static/js/787.08a02ada.chunk.js": "/calculation/static/js/787.08a02ada.chunk.js",
     "static/media/calc_pdf_m.pdf": "/calculation/static/media/calc_pdf_m.a72e3a665617bf50a6f1.pdf",
     "static/media/calc_pdf_d.pdf": "/calculation/static/media/calc_pdf_d.28162ddaf33f7a198f4e.pdf",
@@ -12,11 +12,11 @@
     "static/media/m_dc.png": "/calculation/static/media/m_dc.19d109f71415c512138e.png",
     "index.html": "/calculation/index.html",
     "main.b397fc6c.css.map": "/calculation/static/css/main.b397fc6c.css.map",
-    "main.7976cb3c.js.map": "/calculation/static/js/main.7976cb3c.js.map",
+    "main.323a6e33.js.map": "/calculation/static/js/main.323a6e33.js.map",
     "787.08a02ada.chunk.js.map": "/calculation/static/js/787.08a02ada.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b397fc6c.css",
-    "static/js/main.7976cb3c.js"
+    "static/js/main.323a6e33.js"
   ]
 }
