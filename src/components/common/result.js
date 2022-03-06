@@ -1,6 +1,6 @@
 const resultStyle = {
     height: 45,
-    width: '70%',
+    width: '80%',
     fontSize: '1rem',
     textAlign: 'right',
     backgroundColor: '#6786ff',
@@ -12,7 +12,9 @@ const resultStyle = {
     position: 'relative',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
+    paddingLeft: 10,
+    boxSizing: 'border-box',
 };
 
 const imgStyle = {
@@ -44,11 +46,11 @@ const spanStyle = {
     justifyContent: 'center',
 };
 
-export const Result = ({ src, result, unit, sup}) => {
+export const Result = ({ src, result, unit, sup, text}) => {
     return (
         <p style={resultStyle}>
             <output style={outputStyle}>{result || 'None'} <span style={spanStyle}>{unit}<sup>{sup}</sup></span></output>
-            <img src={src} alt="" style={imgStyle} />
+            {text ? <p>{text}</p> : <img src={src} alt="" style={imgStyle} />}
         </p>
     );
 };

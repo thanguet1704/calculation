@@ -38,6 +38,20 @@ import { PhayTinh } from './milling/proccessing_time/phay_tinh';
 import { PhayChuVi } from './milling/proccessing_time/phay_chu_vi';
 import { PhayTinh2 } from './milling/proccessing_time/phay_tinh_2';
 import { PhayRanh } from './milling/proccessing_time/phay_ranh';
+import { Drilling11 } from './drilling/drilling11';
+import { Drilling12 } from './drilling/drilling12';
+import { Drilling13 } from './drilling/drilling13';
+import { Drilling14 } from './drilling/drilling14';
+import { Drilling21 } from './drilling/drilling21';
+import { Drilling22 } from './drilling/drilling22';
+import { Drilling23 } from './drilling/drilling23';
+import { Drilling311 } from './drilling/drilling311';
+import { Drilling312 } from './drilling/drilling312';
+import { Drilling321 } from './drilling/drilling321';
+import { Drilling322 } from './drilling/drilling322';
+import { Drilling331 } from './drilling/drilling331';
+import { Drilling332 } from './drilling/drilling332';
+import { Drilling4 } from './drilling/drilling4';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -237,16 +251,41 @@ export const Calculation = (props) => {
             </p>
         </div>
         <div id="tc">
-          <h2><b>1. Chọn dao</b></h2>
-          <DrillingCuttingTime />
+          <h2><b>1. Tra tốc độ cắt, lượng chạy dao, số vòng quay, đường kính mũi khoan.<hr/></b></h2>
+          <Drilling11 />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <Drilling12 />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <Drilling13 />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <Drilling14 />
         </div>
         <div id="pc">
-          <h2><b>2. Công suất yêu cầu: P <sub>c</sub> [kW]<hr/></b></h2>
-          <DrillingPowerRequirement />
+          <h2><b>2. Mô men<hr/></b></h2>
+          <Drilling21 />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <Drilling22 />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <Drilling23 />
         </div>
         <div id="vc">
-          <h2><b>3. Cutting Speed vc [m/min]<hr/></b></h2>
-          <DrillingCuttingSpeed />
+          <h2><b>3. Thời gian gia công<hr/></b></h2>
+          <h3>3.1. Khoan thường</h3>
+          <Drilling311 />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <Drilling312 />
+          <h3>3.2. Khoét</h3>
+          <Drilling321 />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <Drilling322 />
+          <h3>3.3. Taro</h3>
+          <Drilling331 /> 
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <Drilling332 />
+        </div>
+        <div id="p">
+          <h2><b>4. Công suất yêu cầu<hr/></b></h2>
+          <Drilling4 />
         </div>
       </Box>
     </TabPanel>
