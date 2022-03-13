@@ -25,9 +25,6 @@ import { MillingCuttingTime } from './milling/cutting_time';
 import { MillingPowerRequirement } from './milling/power_requirement';
 import { MillingCuttingSpeed } from './milling/cutting_speed';
 import { drillingFigures } from '../tabs/figures/drilling_figures';
-import { DrillingCuttingTime } from './drilling/cutting_time';
-import { DrillingPowerRequirement } from './drilling/power_requirement';
-import { DrillingCuttingSpeed } from './drilling/cutting_speed/index';
 import { CuttingSpeedCastSteel } from '../turning/cutting_speed/cast_steels';
 import { PowerCut } from '../turning/power_cut';
 import { Edge } from './milling/cutting_time/edge';
@@ -52,6 +49,11 @@ import { Drilling322 } from './drilling/drilling322';
 import { Drilling331 } from './drilling/drilling331';
 import { Drilling332 } from './drilling/drilling332';
 import { Drilling4 } from './drilling/drilling4';
+import { Turning13 } from '../turning/turning_13';
+import { Turning14 } from '../turning/turning_14';
+import { Turning15 } from '../turning/turning_15';
+import { Turning16 } from '../turning/turning_16';
+import { Turning17 } from '../turning/turning_17';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -160,7 +162,7 @@ export const Calculation = (props) => {
         <div style={{ display: 'flex', justifyContent: 'flex-end'}}>
             <p style={pdfStyle}>
                 <a href={file} target="_blank" title="PDF:Calculation Formula(Milling)" rel="noopener noreferrer">
-                    > Calculation Formula 
+                    > Công thức tính toán và bảng tra
                     <img src={pdf} style={iconStyle} alt="" />
                 </a>
             </p>
@@ -170,6 +172,16 @@ export const Calculation = (props) => {
           <CuttingSpeedSteel />
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
           <CuttingSpeedCastSteel />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <Turning13 />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <Turning14 />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <Turning15 />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <Turning16 />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <Turning17 />
         </div>
         <div id="tc">
           <h2><b>2. Thời gian gia công T<sub>c</sub> [sec]<hr/></b></h2>
@@ -202,7 +214,7 @@ export const Calculation = (props) => {
         <div style={{ display: 'flex', justifyContent: 'flex-end'}}>
             <p style={pdfStyle}>
                 <a href={millingFilePdf} target="_blank" title="PDF:Calculation Formula(Milling)" rel="noopener noreferrer">
-                    > Calculation Formula 
+                    > Công thức tính toán và bảng tra
                     <img src={pdf} style={iconStyle} alt="" />
                 </a>
             </p>
@@ -245,7 +257,7 @@ export const Calculation = (props) => {
         <div style={{ display: 'flex', justifyContent: 'flex-end'}}>
             <p style={pdfStyle}>
                 <a href={drillingFilePdf} target="_blank" title="PDF:Calculation Formula(Milling)" rel="noopener noreferrer">
-                    > Calculation Formula 
+                    > Công thức tính toán và bảng tra
                     <img src={pdf} style={iconStyle} alt="" />
                 </a>
             </p>

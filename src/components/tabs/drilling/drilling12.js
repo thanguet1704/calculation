@@ -1,24 +1,55 @@
-import { InputCommon } from '../../common/input';
-import wtc from '../../../public/img/w_tc.png';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
 import { Result } from '../../common/result';
 import Grid from '@mui/material/Grid';
+import { Selector } from '../../common/selector';
+import { Phois} from './data_driling12';
 
 export const Drilling12 = () => {
-    const [result, setResult] = useState(0);
-    const [p, setP] = useState(0);
-    const [c, setC] = useState(0);
+    const [phois, setPhois] = useState(Phois);
+    const [phoi, setPhoi] = useState(0);
+    const [selectedPhoi, setSelectedPhoi] = useState(false);
+
+    const [luongChayDaos, setLuongChayDaos] = useState([]);
+    const [luongChayDao, setLuongChayDao] = useState(0);
+    const [selectedLuongChayDao, setSelectedLuongChayDao] = useState(false);
+
+    const [ds, setDs] = useState([]);
     const [d, setD] = useState(0);
-    const [q, setQ] = useState(0);
-    const [k, setK] = useState(0);
-    const [reset, setReset] = useState(false);
+    const [selectedD, setSelectedD] = useState(false);
+
+    const [tocDoCat, setTocDoCat] = useState(0);
+    const [kq, setKq] = useState(0);
+    const [text, setText] = useState("Lượng chạy dao:");
 
     const handleOnClick = () => {
-        setResult(0);
-        document.getElementById('khoan1.2').reset();
-        setReset(true);
-    };
+        setTocDoCat(0);
+        setKq(0);
+        setSelectedPhoi(false);
+        setSelectedLuongChayDao(false);
+        setLuongChayDaos([]);
+        setLuongChayDao(0);
+        setDs([]);
+        setD(0);
+    }
+
+    useEffect(() => {
+        setTocDoCat(phois?.find(item => item.value === phoi)?.tocDoCat);
+        setLuongChayDaos(phois?.find(item => item.value === phoi)?.soVongQuay);
+    }, [phoi]);
+
+    useEffect(() => {
+        setDs(luongChayDaos?.find(item => item.value === luongChayDao)?.duongKinh);
+        if (luongChayDao === 'n') {
+            setText('Số vòng quay:');
+        } else {
+            setText('Lượng chạy dao:');
+        }
+    }, [luongChayDao]);
+
+    useEffect(() => {
+        setKq(ds?.find(item => item.value === d)?.luongChayDao);
+    }, [d]);
 
     return (
         <form id="khoan1.2">
@@ -26,22 +57,22 @@ export const Drilling12 = () => {
                 <h4><b>{`1.2. Tốc độ cắt Vc, lượng chạy dao f và số vòng quay n khi khoan với mũi khoan làm từ thép gió với chiều sâu khoan t = 5d, 
                 các giá trị trong ngoặc [] có thể áp dụng cho mũi khoan làm từ cemented carbide. (Khi chiều sâu khoan 5d < t ≤ 10d các giá trị này giảm đi 20%)`}</b></h4>
                 <Grid container spacing={2}>
-                    <Grid item sm={12}> 
-                        <InputCommon text="Phôi" placeholder="Nhập thông số" setValue={setP}/>
+                    <Grid item sm={12} lg={4}> 
+                        <Selector text="Phôi" items={phois} setSelected={setSelectedPhoi} setValue={setPhoi} disable={true}/>
+                    </Grid>
+                    <Grid item sm={12} lg={4}> 
+                        <Selector text="Lượng chạy dao f và số vòng quay n" items={luongChayDaos} setSelected={setSelectedLuongChayDao} setValue={setLuongChayDao} disable={selectedPhoi}/>
+                    </Grid>
+                    <Grid item sm={12} lg={4}> 
+                        <Selector text="Đường kính lỗ khoan D (mm)" items={ds} setSelected={setSelectedD} setValue={setD} disable={selectedLuongChayDao}/>
                     </Grid>
                 </Grid>
                 <Grid container spacing={3}>
                     <Grid item sm={12} md={6}>
-                        <Result src={wtc} result={result} text="Tốc độ cắt" unit="sec" setValue={setResult} />
+                        <Result result={tocDoCat} text="Tốc độ cắt:" unit="sec" setValue={setTocDoCat} />
                     </Grid>
                     <Grid item sm={12} md={6}>  
-                        <Result src={wtc} result={result} text="Lượng chạy dao" unit="sec" setValue={setResult} />
-                    </Grid>
-                    <Grid item sm={12} md={6}>  
-                        <Result src={wtc} result={result} text="Số vòng quay" unit="sec" setValue={setResult} />
-                    </Grid>
-                    <Grid item sm={12} md={6}>  
-                        <Result src={wtc} result={result} unit="sec" text="Đường kính mũi khoan" setValue={setResult} />
+                        <Result result={kq} text={text} unit="sec" setValue={setKq} />
                     </Grid>
                 </Grid>
                 <br></br>

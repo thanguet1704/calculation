@@ -51,7 +51,6 @@ export const Selector = ({ text, src, defaultLabel, items, setSelected, setValue
         <FormControl  fullWidth>
           <Select
             value={valueSelect}
-            label={defaultLabel}
             onChange={handleChange}
             style={inputStyle}
             disabled={!disable}
@@ -59,7 +58,7 @@ export const Selector = ({ text, src, defaultLabel, items, setSelected, setValue
           >
             {items?.map(item => {
                 return (
-                  <MenuItem value={item.value}>{item.label.trim()}</MenuItem>
+                  <MenuItem value={item.value}>{item.label}</MenuItem>
                 );
             })}
           </Select>

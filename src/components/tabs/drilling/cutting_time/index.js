@@ -1,39 +1,65 @@
-import { InputCommon } from '../../../common/input';
-import wtc from '../../../../public/img/w_tc.png';
-import { useState } from 'react';
+import { Selector } from '../../../common/selector';
+import { useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
 import { Result } from '../../../common/result';
 import Grid from '@mui/material/Grid';
+import { kieus } from './data';
 
 export const DrillingCuttingTime = () => {
     const [result, setResult] = useState(0);
-    const [nValue, setN] = useState(0);
-    const [fValue, setF] = useState(0);
-    const [lValue, setL] = useState(0);
-    const [reset, setReset] = useState(false);
+    const [kds, setKds] = useState(kieus);
+    const [kd, setKd] = useState(0);
+    const [selectedKd, setSelectedKd] = useState(false);
+
+    const [lds, setLds] = useState([]);
+    const [ld, setLd] = useState(0);
+    const [selectedLd, setSelectedLd] = useState(false);
+
+    const [dks, setDks] = useState([]);
+    const [dk, setDk] = useState(0);
+    const [selectedDk, setSelectedDk] = useState(false);
 
     const handleOnClick = () => {
         setResult(0);
-        document.getElementById('phay1.1#1').reset();
-        setReset(true);
+        setLds([]);
+        setLd(0);
+        setSelectedLd(false);
+        setDks([]);
+        setDk(0);
+        setSelectedDk(false);
+        setResult(0);
+        setSelectedKd(false);
+        setKd(0);
     };
+
+    useEffect(() => {
+        setLds(kds?.find(item => item.value === kd)?.loaiDao);
+    }, [kd]);
+
+    useEffect(() => {
+        setDks(lds?.find(item => item.value === ld)?.duongKinh);
+    }, [ld]);
+
+    useEffect(() => {
+        setResult(dks?.find(item => item.value === dk)?.kq);
+    }, [dk]);
 
     return (
         <form id="phay1.1#1">
             <div style={{ display: 'flex', flexDirection: 'column'}}>
-                <h4><b>1.1. Đường kính dao và số lưỡi cắt của một số loại dao phay đơn thép gió.</b></h4>
+                <h4><b>1.1. Đường kính dao và số lưỡi cắt của một số loại dao phay đơn thép giód.</b></h4>
                 <Grid container spacing={2}>
                     <Grid item xs={12} xl={3} lg={4}> 
-                        <InputCommon text="Kiểu dao" placeholder="Nhập thông số" setValue={setL}/>
+                        <Selector text="Kiểu dao" items={kd} setSelected={setSelectedKd} setValue={setKd} disable={true}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>
-                        <InputCommon text="Loại dao" placeholder="Nhập thông số" setValue={setL}/>
+                        <Selector text="Loại dao" items={ld} setSelected={setSelectedLd} setValue={setLd} disable={selectedKd}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>  
-                        <InputCommon text="Đường kính dao" placeholder="Nhập thông số" setValue={setL}/>
+                        <Selector text="Đường kính dao" items={dk} setSelected={setSelectedDk} setValue={setDk} disable={selectedLd}/>
                     </Grid>
                 </Grid>
-                <Result src={wtc} result={result} unit="sec" setValue={setResult} />
+                <Result text="Dao:" result={result} unit="sec"/>
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

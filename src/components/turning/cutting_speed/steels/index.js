@@ -100,9 +100,6 @@ export const CuttingSpeedSteel = () => {
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>
-            <div style={{ width: '100%', textAlign: 'center',}}>
-                <Table710 />
-            </div>
         </form>
     );
 };
