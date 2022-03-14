@@ -76,22 +76,22 @@ export const MillingPowerRequirement = () => {
                 </Grid>
                 <Grid container spacing={2}>
                     <Grid item xs={12} lg={6}> 
-                        <Result text="fz (mm/răng):" result={f} unit="kW" />
+                        <Result text="fz (mm/răng):" result={f} unit="sec" />
                     </Grid>
                     <Grid item xs={12} lg={6}> 
-                        <Result text="Vc (m/ph):" result={v} unit="kW" />
+                        <Result text="Vc (m/ph):" result={v} unit="sec" />
                     </Grid>
                     <Grid item xs={12} lg={6}> 
-                        <Result text="a°:" result={a} unit="kW" />
+                        <Result text="α°:" result={a} unit="°" />
                     </Grid>
                     <Grid item xs={12} lg={6}> 
-                        <Result text="g°:" result={g} unit="kW" />
+                        <Result text="γ°:" result={g} unit="°" />
                     </Grid>
                     <Grid item xs={12} lg={6}> 
-                        <Result text="gz°:" result={gz} unit="kW" />
+                        <Result text="γz°:" result={gz} unit="°" />
                     </Grid>
                     <Grid item xs={12} lg={6}> 
-                        <Result text="l°:" result={l} unit="kW" />
+                        <Result text="λ°:" result={l} unit="°" />
                     </Grid>
                 </Grid>
                 <br></br>

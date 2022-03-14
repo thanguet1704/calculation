@@ -53,13 +53,13 @@ export const Edge = () => {
                 </Grid>
                 <Grid container spacing={2}>
                     <Grid item xs={12} xl={4} lg={6}> 
-                        <Result text="a:" result={a} unit="sec"  />
+                        <Result text={'α:'} result={a} unit="độ"  />
                     </Grid>
                     <Grid item xs={12} xl={4} lg={6}>
-                        <Result text="g:" result={g} unit="sec" />
+                        <Result text="γ:" result={g} unit="độ" />
                     </Grid>
                     <Grid item xs={12} xl={4} lg={6}>
-                        <Result text="l:" result={l} unit="sec"  />
+                        <Result text="λ:" result={l} unit="độ"  />
                     </Grid>
                 </Grid>
                 <br></br>

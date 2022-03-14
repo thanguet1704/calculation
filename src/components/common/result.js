@@ -39,7 +39,7 @@ const outputStyle = {
 };
 
 const spanStyle = {
-    fontSize: '50%',
+    fontSize: '80%',
     marginLeft: 10,
     display: 'flex',
     alignItems: 'center',
