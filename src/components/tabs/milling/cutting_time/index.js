@@ -49,13 +49,13 @@ export const MillingCuttingTime = () => {
             <div style={{ display: 'flex', flexDirection: 'column'}}>
                 <h4><b>1.1. Đường kính dao và số lưỡi cắt của một số loại dao phay đơn thép gió.</b></h4>
                 <Grid container spacing={2}>
-                    <Grid item xs={12} xl={3} lg={4}> 
+                    <Grid item xs={12} xl={4}> 
                         <Selector text="Kiểu dao" items={kds} setSelected={setSelectedKd} setValue={setKd} disable={true}/>
                     </Grid>
-                    <Grid item xs={12} xl={3} lg={4}>
+                    <Grid item xs={12} xl={4}>
                         <Selector text="Loại dao" items={lds} setSelected={setSelectedLd} setValue={setLd} disable={selectedKd}/>
                     </Grid>
-                    <Grid item xs={12} xl={3} lg={4}>  
+                    <Grid item xs={12} xl={4}>  
                         <Selector text="Đường kính dao" items={dks} setSelected={setSelectedDk} setValue={setDk} disable={selectedLd}/>
                     </Grid>
                 </Grid>

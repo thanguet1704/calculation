@@ -10,17 +10,17 @@ export const kieus = [
                     {
                         value: 10,
                         label: 10,
-                        kq: '-'
+                        kq: 'None'
                     },
                     {
                         value: 20,
                         label: 20,
-                        kq: '-'
+                        kq: 'None'
                     },
                     {
                         value: 30,
                         label: 30,
-                        kq: '-'
+                        kq: 'None'
                     },
                     {
                         value: 40,
@@ -60,7 +60,7 @@ export const kieus = [
                     {
                         value: 200,
                         label: 200,
-                        kq: '-'
+                        kq: 'None'
                     }
                 ]
             },
@@ -71,17 +71,17 @@ export const kieus = [
                     {
                         value: 10,
                         label: 10,
-                        kq: '-'
+                        kq: 'None'
                     },
                     {
                         value: 20,
                         label: 20,
-                        kq: '-'
+                        kq: 'None'
                     },
                     {
                         value: 30,
                         label: 30,
-                        kq: '-'
+                        kq: 'None'
                     },
                     {
                         value: 40,
@@ -121,7 +121,7 @@ export const kieus = [
                     {
                         value: 200,
                         label: 200,
-                        kq: '-'
+                        kq: 'None'
                     }
                 ]
             }
