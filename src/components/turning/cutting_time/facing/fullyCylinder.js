@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
 import { Result } from '../../../common/result';
 import Grid from '@mui/material/Grid';
-import { Table712 } from '../../../tables/712';
 
 const divInputStyle = {
     width: '100%',
@@ -55,9 +54,6 @@ export const FullyCylinder = () => {
                 <Result src={wtc} result={result} unit="sec" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
-            </div>
-            <div style={{ width: '100%', textAlign: 'center',}}>
-                <Table712 />
             </div>
         </form>
     );
