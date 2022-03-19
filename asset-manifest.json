@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/calculation/static/css/main.f47c02ff.css",
-    "main.js": "/calculation/static/js/main.8849f8e2.js",
+    "main.css": "/calculation/static/css/main.d754eb4d.css",
+    "main.js": "/calculation/static/js/main.122aa617.js",
     "static/js/787.08a02ada.chunk.js": "/calculation/static/js/787.08a02ada.chunk.js",
     "static/media/calc_pdf_m.pdf": "/calculation/static/media/calc_pdf_m.fc2aa2493bcfd4bfa193.pdf",
     "static/media/calc_pdf_d.pdf": "/calculation/static/media/calc_pdf_d.fa8e0e9ab3297f4c922a.pdf",
     "static/media/app_milling.png": "/calculation/static/media/app_milling.fbee0c9e073289a13d77.png",
+    "static/media/bg.png": "/calculation/static/media/bg.c0265cc85f2bb2ba21db.png",
     "static/media/app_turning.png": "/calculation/static/media/app_turning.37a4c2c8b59f003bc199.png",
     "static/media/app_drilling.png": "/calculation/static/media/app_drilling.3133cf4f582d5a0543dd.png",
     "index.html": "/calculation/index.html",
-    "main.f47c02ff.css.map": "/calculation/static/css/main.f47c02ff.css.map",
-    "main.8849f8e2.js.map": "/calculation/static/js/main.8849f8e2.js.map",
+    "main.d754eb4d.css.map": "/calculation/static/css/main.d754eb4d.css.map",
+    "main.122aa617.js.map": "/calculation/static/js/main.122aa617.js.map",
     "787.08a02ada.chunk.js.map": "/calculation/static/js/787.08a02ada.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f47c02ff.css",
-    "static/js/main.8849f8e2.js"
+    "static/css/main.d754eb4d.css",
+    "static/js/main.122aa617.js"
   ]
 }
