@@ -1,6 +1,6 @@
 const resultStyle = {
     height: 45,
-    width: '80%',
+    width: '60%',
     fontSize: '1rem',
     textAlign: 'right',
     backgroundColor: '#6786ff',
@@ -39,7 +39,7 @@ const outputStyle = {
 };
 
 const spanStyle = {
-    fontSize: '80%',
+    fontSize: '100%',
     marginLeft: 10,
     display: 'flex',
     alignItems: 'center',
@@ -49,7 +49,7 @@ const spanStyle = {
 export const Result = ({ src, result, unit, sup, text}) => {
     return (
         <p style={resultStyle}>
-            <output style={outputStyle}>{result || 'None'} <span style={spanStyle}>{unit}<sup>{sup}</sup></span></output>
+            <output style={outputStyle}>{result || 'Không có giá trị'} <span style={spanStyle}>{unit}<sup>{sup}</sup></span></output>
             {text ? <p>{text}</p> : <img src={src} alt="" style={imgStyle} />}
         </p>
     );

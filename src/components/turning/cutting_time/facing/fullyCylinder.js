@@ -47,11 +47,11 @@ export const FullyCylinder = () => {
                         <InputCommon text="Lượng chạy dao: f(mm)" placeholder="Nhập thông số" setValue={setF}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>
-                        <InputCommon text="Tốc độ cắt: vc(m/ph)" placeholder="Nhập thông số" setValue={setVc}/>
+                        <InputCommon text="Tốc độ cắt: v(m/ph)" placeholder="Nhập thông số" setValue={setVc}/>
                     </Grid>
                 </Grid>
                 </div>
-                <Result src={wtc} result={result} unit="sec" setValue={setResult} />
+                <Result  result={result} unit="ph" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

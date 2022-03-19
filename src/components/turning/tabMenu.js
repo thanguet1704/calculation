@@ -51,7 +51,7 @@ const aStyle = {
 
 const ulStyle = {
     display: 'flex', 
-    listStyleType: 'none',
+    listStyleType: 'Không có giá trị',
     marginLeft: -50,
 };
 

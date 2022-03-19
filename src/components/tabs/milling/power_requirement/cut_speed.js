@@ -24,7 +24,7 @@ export const CutSpeed = () => {
     return (
         <form id="phay2.3">
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <h4><b>2.3. Tốc độ cắt V<sub>c</sub> (m/ph), lượng chạy dao răng f<sub>z</sub> (mm/răng) và thông số hình học dao làm từ cemented carbide. 
+                <h4><b>2.3. Tốc độ cắt v (m/ph), lượng chạy dao răng f<sub>z</sub> (mm/răng) và thông số hình học dao làm từ cemented carbide. 
                     Giá trị khi tiện thô tương ứng với chiều sâu cắt a = 10mm.</b></h4>
                 <Grid container spacing={2}>
                     <Grid item xs={12} xl={3} lg={4}> 
@@ -40,19 +40,19 @@ export const CutSpeed = () => {
                         <InputCommon text="Lượng chạy dao răng fz(mm/r)" placeholder="Nhập thông số" setValue={setL}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>  
-                        <InputCommon text="Tốc độ cắt Vc(m/ph)" placeholder="Nhập thông số" setValue={setPt}/>
+                        <InputCommon text="Tốc độ cắt v(m/ph)" placeholder="Nhập thông số" setValue={setPt}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>  
-                        <InputCommon text="Góc trước a°" placeholder="Nhập thông số" setValue={setPt2}/>
+                        <InputCommon text="Góc trước α°" placeholder="Nhập thông số" setValue={setPt2}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>  
-                        <InputCommon text="Góc sau g°" placeholder="Nhập thông số" setValue={setPt2}/>
+                        <InputCommon text="Góc sau γ°" placeholder="Nhập thông số" setValue={setPt2}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>  
-                        <InputCommon text="Góc xoắn l°" placeholder="Nhập thông số" setValue={setPt2}/>
+                        <InputCommon text="Góc xoắn λ°" placeholder="Nhập thông số" setValue={setPt2}/>
                     </Grid>
                 </Grid>
-                <Result src={wpc} result={result} unit="kW" setValue={setResult} />
+                <Result result={result} unit="kW" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

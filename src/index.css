@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', Times, serif';
   color: #250044;
   -webkit-font-smoothing: subpixel-antialiased;
+  margin: 0;
 }
 
 img:hover, li:hover {
@@ -18,7 +19,7 @@ a {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
+    display: none;
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
@@ -59,4 +60,17 @@ td {
 .up-down:hover {
   cursor: pointer;
   color: #c7c9c8;
+}
+
+.bg-img {
+  background-size: 180px 200px !important;
+  background-position: 400px 80px !important;
+  z-index: -2 !important;
+  background-image: url('./public/img/bg.png');
+  background-repeat: no-repeat;
+}
+
+.header {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: 'rgb(103, 134, 255)';
 }

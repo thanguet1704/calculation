@@ -36,7 +36,7 @@ export const MillingFeedRate = () => {
                     <InputCommon src={dc} placeholder="Diameter" setValue={setD1}/>
                     <InputCommon src={z} placeholder="Diameter" setValue={setD1}/>
                 </div>
-                <Result src={fz} result={result} unit="mm/tt" setValue={setResult} />
+                <Result result={result} unit="mm/tt" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

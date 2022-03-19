@@ -116,7 +116,7 @@ export const CuttingTimeT1 = () => {
                         <InputCommon text="Đường kính phôi: D(mm)" placeholder="Nhập thông số" setValue={setD}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>
-                        <InputCommon text="Tốc độ cắt: vc(m/ph)" placeholder="Nhập thông số" setValue={setVc}/>
+                        <InputCommon text="Tốc độ cắt: v(m/ph)" placeholder="Nhập thông số" setValue={setVc}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}> 
                         <Selector text="Số lần cắt: p" defaultLabel="Chọn thông số" items={pItems} disable={true} setValue={setP}/>
@@ -125,7 +125,7 @@ export const CuttingTimeT1 = () => {
                         <InputCommon text="Chiều sâu cắt: ap(mm)" placeholder="Nhập thông số" setValue={setAp}/>
                     </Grid>
                 </Grid>
-                <Result src={wt1} result={result} unit="sec" setValue={setResult} />
+                <Result result={result} unit="ph" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

@@ -108,7 +108,7 @@ export const DrillingPowerRequirement = () => {
                     <InputCommon src={dc} placeholder="Diameter" setValue={setD1}/>
                     <Selector src={hb} defaultLabe="Specific Cutting Force" items={CuttingForces}/>
                 </div>
-                <Result src={wpc} result={result} unit="kW" setValue={setResult} />
+                <Result  result={result} unit="kW" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

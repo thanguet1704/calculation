@@ -36,10 +36,10 @@ export const Drilling14 = () => {
                 </Grid>
                 <Grid container spacing={3}>
                     <Grid item sm={12} md={6}>
-                        <Result result={ren} text="Bước ren"  unit="sec" />
+                        <Result result={ren} text="Bước ren"  unit="ph" />
                     </Grid>
                     <Grid item sm={12} md={6}>
-                        <Result result={dk} text="Đường kính lỗ khoan" unit="sec" />  
+                        <Result result={dk} text="Đường kính lỗ khoan" unit="mm" />  
                     </Grid>
                 </Grid>
                 <br></br>

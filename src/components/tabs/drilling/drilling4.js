@@ -34,10 +34,10 @@ export const Drilling4 = () => {
                         <InputCommon text="Số vòng quay n (v/ph)" placeholder="Nhập thông số" setValue={setN}/>
                     </Grid>
                     <Grid item sm={12} md={6} lg={4}>  
-                        <InputCommon text="Hiệu suất máy ηM (0,7 – 0,9)" placeholder="Nhập thông số" setValue={setN2}/>
+                        <InputCommon text="Hiệu suất máy η (0,7 – 0,9)" min="0.7" max="0.9" placeholder="Nhập thông số" setValue={setN2}/>
                     </Grid>
                 </Grid>
-                <Result src={wtc} result={result} unit="sec" setValue={setResult} />
+                <Result  result={result} unit="ph" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

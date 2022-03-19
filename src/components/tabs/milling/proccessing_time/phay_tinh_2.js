@@ -47,7 +47,7 @@ export const PhayTinh2 = () => {
                         <InputCommon text="Số vòng quay n(vòng/ph)" placeholder="Nhập thông số" setValue={setN}/>
                     </Grid>
                 </Grid>
-                <Result src={wpc} result={result} unit="kW" setValue={setResult} />
+                <Result result={result} unit="kW" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

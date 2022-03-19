@@ -47,28 +47,28 @@ export const MillingCuttingSpeed = () => {
                          <InputCommon text="Lực cắt đơn vị: kc1.1 (N/mm2)" placeholder="Nhập thông số" setValue={setKc}/>
                     </Grid>
                     <Grid item sm={12} md={6} xl={3} lg={4}>
-                         <InputCommon text="Hệ số Kg" placeholder="Nhập thông số" setValue={setKg}/>
+                         <InputCommon text="Hệ số hiệu chỉnh góc trước Kγ" placeholder="Nhập thông số" setValue={setKg}/>
                     </Grid>
                     <Grid item sm={12} md={6} xl={3} lg={4}>
-                         <InputCommon text="Hệ số Kv" placeholder="Nhập thông số" setValue={setKv}/>
+                         <InputCommon text="Hệ số ảnh hưởng vật liệu dao Kv" placeholder="Nhập thông số" setValue={setKv}/>
                     </Grid>
                     <Grid item sm={12} md={6} xl={3} lg={4}>
-                         <InputCommon text="Hệ số Kver" placeholder="Nhập thông số" setValue={setKver}/>
+                         <InputCommon text="Hệ số hao mòn Kver" placeholder="Nhập thông số" setValue={setKver}/>
                     </Grid>
                     <Grid item sm={12} md={6} xl={3} lg={4}>
-                         <InputCommon text="Hệ số Kst" placeholder="Nhập thông số" setValue={setKst}/>
+                         <InputCommon text="Hệ số nén phoi Kst" placeholder="Nhập thông số" setValue={setKst}/>
                     </Grid>
                     <Grid item sm={12} md={6} xl={3} lg={4}>
-                         <InputCommon text="Tốc độ cắt: Vc (m/ph)" placeholder="Nhập thông số" setValue={setVc}/>
+                         <InputCommon text="Tốc độ cắt: v (m/ph)" placeholder="Nhập thông số" setValue={setVc}/>
                     </Grid>
                     <Grid item sm={12} md={6} xl={3} lg={4}>
-                         <InputCommon text="Góc tiếp cận: φs°" placeholder="Nhập thông số" setValue={setP}/>
+                         <InputCommon text="Góc tiếp cận: φ°" placeholder="Nhập thông số" setValue={setP}/>
                     </Grid>
                     <Grid item sm={12} md={6} xl={3} lg={4}>
                          <InputCommon text="Số lưỡi dao cắt: n" placeholder="Nhập thông số" setValue={setN}/>
                     </Grid>
                     <Grid item sm={12} md={6} xl={3} lg={4}>
-                         <InputCommon text="Hiệu suất động cơ: η (70 – 80%)" placeholder="Nhập thông số" setValue={setN2}/>
+                         <InputCommon text="Hiệu suất động cơ: η (0.7 – 0.8)" placeholder="Nhập thông số" setValue={setN2}/>
                     </Grid>
                     <Grid item sm={12} md={6} xl={3} lg={4}>
                          <InputCommon text="Hằng số vật liệu: z" placeholder="Nhập thông số" setValue={setZ}/>
@@ -83,10 +83,10 @@ export const MillingCuttingSpeed = () => {
                          <InputCommon text="Lượng chạy dao răng: fz (mm/răng)" placeholder="Nhập thông số" setValue={setFz}/>
                     </Grid>
                     <Grid item sm={12} md={6} xl={3} lg={4}>
-                         <InputCommon text="Góc bào: ψ°" placeholder="Nhập thông số" setValue={setP2}/>
+                         <InputCommon text="Góc: α°" placeholder="Nhập thông số" setValue={setP2}/>
                     </Grid>
                 </Grid>
-                <Result src={wvc} result={result} unit="m/min" setValue={setResult} />
+                <Result esult={result} unit="m/ph" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

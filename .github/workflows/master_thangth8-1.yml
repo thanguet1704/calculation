@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'thangth8-1'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_50A98DE38D424FC6B5A25854218BBEA3 }}
+          publish-profile: ${{ phrets.AZUREAPPSERVICE_PUBLISHPROFILE_50A98DE38D424FC6B5A25854218BBEA3 }}
           package: .

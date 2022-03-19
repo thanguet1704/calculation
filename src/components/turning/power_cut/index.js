@@ -52,13 +52,13 @@ export const PowerCut = () => {
                         <InputCommon text="Góc trước thực tế: γtat°" placeholder="Nhập thông số" setValue={setYt}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}> 
-                        <Selector text="Góc trước: γ0°" defaultLabel="Chọn thông số" disable={true} setValue={setY0} items={y0Items}/>
+                        <Selector text="Góc trước: γo°" defaultLabel="Chọn thông số" disable={true} setValue={setY0} items={y0Items}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>
                         <Selector text="Hệ số hiệu chỉnh tốc độ cắt: Kv" defaultLabel="Chọn thông số" disable={true} setValue={setKv} items={kvItems}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>
-                        <InputCommon text="Hệ số Kver" disable={true} setValue={setKver} defaultValue={kver}/>
+                        <InputCommon text="Hệ số hao mòn Kver" disable={true} setValue={setKver} defaultValue={kver}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>
                         <Selector text="Hệ số nén: Kst" defaultLabel="Chọn thông số" setValue={setKst} items={kstItems} disable={true}/>
@@ -67,7 +67,7 @@ export const PowerCut = () => {
                         <Selector text="Hằng số vật liệu: z" defaultLabel="Chọn thông số" setValue={setZ} items={zItems} disable={true}/>
                     </Grid>
                 </Grid>
-                <Result src={wf} result={result} unit="mm/rev" setValue={setResult} />
+                <Result  result={result} unit="mm/rev" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

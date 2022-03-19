@@ -70,7 +70,7 @@ export const CuttingSpeedCastSteel = () => {
                         <Selector text="Lượng chạy dao f(mm/v)" defaultLabel="Chọn lượng chạy dao" items={fs} setValue={setFValue} setSelected={setSelectedF} disable={selectedAp}/>
                     </Grid>
                 </Grid>
-                <Result src={wvc} result={result} unit="m/min" setValue={setResult} />
+                <Result result={result} unit="m/ph" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

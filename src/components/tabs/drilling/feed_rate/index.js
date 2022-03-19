@@ -34,7 +34,7 @@ export const DrillingFeedRate = () => {
                     <InputCommon src={vf} placeholder="Legth of Cut/min" setValue={setF}/>
                     <InputCommon src={dc} placeholder="Diameter" setValue={setD1}/>
                 </div>
-                <Result src={f} result={result} unit="mm/rev" setValue={setResult} />
+                <Result result={result} unit="mm/rev" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

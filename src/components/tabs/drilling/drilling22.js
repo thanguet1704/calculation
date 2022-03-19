@@ -42,7 +42,7 @@ export const Drilling22 = () => {
                         <InputCommon text="Lực cắt đơn vị" placeholder="Nhập thông số" setValue={setKc}/>
                     </Grid>
                 </Grid>
-                <Result src={wtc} result={result} unit="sec" setValue={setResult} />
+                <Result  result={result} unit="ph" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

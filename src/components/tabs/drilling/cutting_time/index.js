@@ -59,7 +59,7 @@ export const DrillingCuttingTime = () => {
                         <Selector text="Đường kính dao" items={dk} setSelected={setSelectedDk} setValue={setDk} disable={selectedLd}/>
                     </Grid>
                 </Grid>
-                <Result text="Dao:" result={result} unit="sec"/>
+                <Result text="Dao:" result={result} unit="ph"/>
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

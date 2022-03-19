@@ -96,7 +96,7 @@ export const CuttingSpeedSteel = () => {
                             disable={selectedAp}/>
                     </Grid>
                 </Grid>
-                <Result src={wvc} result={result} unit="m/min" setValue={setResult} />
+                <Result  result={result} unit="m/ph" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

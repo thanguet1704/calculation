@@ -168,7 +168,7 @@ export const Calculation = (props) => {
             </p>
         </div>
         <div id="vc">
-          <h2><b>1. Tốc độ cắt vc [m/min]<hr/></b></h2>
+          <h2><b>1. Tốc độ cắt v (m/ph)<hr/></b></h2>
           <CuttingSpeedSteel />
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
           <CuttingSpeedCastSteel />
@@ -184,7 +184,7 @@ export const Calculation = (props) => {
           <Turning17 />
         </div>
         <div id="tc">
-          <h2><b>2. Thời gian gia công T<sub>c</sub> [sec]<hr/></b></h2>
+          <h2><b>2. Thời gian gia công t<sub>h</sub> (ph)<hr/></b></h2>
           {/* <TabMenu /> */}
           <CylindricalTurning />
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
@@ -203,7 +203,7 @@ export const Calculation = (props) => {
           <PowerCut />
         </div>
         <div id="pc">
-          <h2><b>4. Công suất yêu cầu: P<sub>c</sub> [kW]<hr/></b></h2>
+          <h2><b>4. Công suất yêu cầu: P (kW)<hr/></b></h2>
           <PowerRequirement />
         </div>
       </Box>
@@ -234,11 +234,11 @@ export const Calculation = (props) => {
           <CutSpeed />
         </div>
         <div id="vc">
-          <h2><b>3. Công suất yêu cầu.<hr/></b></h2>
+          <h2><b>3. Công suất yêu cầu P (kW).<hr/></b></h2>
           <MillingCuttingSpeed />
         </div>
         <div id="pt">
-          <h2><b>4. Thời gian gia công.<hr/></b></h2>
+          <h2><b>4. Thời gian gia công t<sub>h</sub> (ph)<hr/></b></h2>
           <PhayChuVi />
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
           <PhayTho />
@@ -281,7 +281,7 @@ export const Calculation = (props) => {
           <Drilling23 />
         </div>
         <div id="vc">
-          <h2><b>3. Thời gian gia công<hr/></b></h2>
+          <h2><b>3. Thời gian gia công t<sub>h</sub> (ph)<hr/></b></h2>
           <h3>3.1. Khoan thường</h3>
           <Drilling311 />
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
@@ -296,11 +296,11 @@ export const Calculation = (props) => {
           <Drilling332 />
         </div>
         <div id="p">
-          <h2><b>4. Công suất yêu cầu<hr/></b></h2>
+          <h2><b>4. Công suất yêu cầu: P (kW)<hr/></b></h2>
           <Drilling4 />
         </div>
       </Box>
     </TabPanel>
-    <h2 class="section-title hidden-phone">Cutting Calculation App 「SumiTool Calculator」</h2>
+    <h2 class="phtion-title hidden-phone">Cutting Calculation App 「SumiTool Calculator」</h2>
   </Box>
 )};

@@ -51,7 +51,7 @@ export const Drilling331 = () => {
                         <InputCommon text="Lượng chạy dao" placeholder="Nhập thông số" setValue={setF}/>
                     </Grid>
                 </Grid>
-                <Result src={wtc} result={result} unit="sec" setValue={setResult} />
+                <Result  result={result} unit="ph" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

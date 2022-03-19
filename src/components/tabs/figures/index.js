@@ -1,23 +1,18 @@
 import Grid from '@mui/material/Grid';
 
-const imgStyle = {
-    padding: '0 5px',
-    border: '2px solid #edaef9',
-    borderRadius: '10px',
-    boxSizing: 'border-box',
-    maxWidth: 150,
-    height: 'auto',
-    verticalAlign: 'middle',
-    backgroundColor: '#edaef9',
-};
-
 const pStyle = {
     display: 'flex',
-    flexDirection: 'column',
     alignItems: 'center',
+    justifyContent: 'center',
     textAlign: 'center',
     color: 'rgb(103, 134, 255)',
     fontWeight: 'bold',
+    backgroundColor: 'rgb(237, 174, 249)',
+    height: '90px',
+    borderRadius: '10px',
+    fontWeight: 'bold',
+    fontSize: 'larger',
+    width: '70%'
 };
 
 export const Figure = ({ figures }) => {
@@ -28,8 +23,7 @@ export const Figure = ({ figures }) => {
                     <Grid item sm={4} md={3}>
                         <a href={item.href} >
                             <p style={pStyle} >
-                                <img src={item.src} alt={item.alt} style={imgStyle}/>
-                                {item.title}
+                                <b>{item.title}</b>
                             </p>
                         </a>
                     </Grid>

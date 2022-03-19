@@ -54,7 +54,7 @@ export const Drilling12 = () => {
     return (
         <form id="khoan1.2">
             <div style={{ display: 'flex', flexDirection: 'column'}}>
-                <h4><b>{`1.2. Tốc độ cắt Vc, lượng chạy dao f và số vòng quay n khi khoan với mũi khoan làm từ thép gió với chiều sâu khoan t = 5d, 
+                <h4><b>{`1.2. Tốc độ cắt v, lượng chạy dao f và số vòng quay n khi khoan với mũi khoan làm từ thép gió với chiều sâu khoan t = 5d, 
                 các giá trị trong ngoặc [] có thể áp dụng cho mũi khoan làm từ cemented carbide. (Khi chiều sâu khoan 5d < t ≤ 10d các giá trị này giảm đi 20%)`}</b></h4>
                 <Grid container spacing={2}>
                     <Grid item sm={12} lg={4}> 
@@ -69,10 +69,10 @@ export const Drilling12 = () => {
                 </Grid>
                 <Grid container spacing={3}>
                     <Grid item sm={12} md={6}>
-                        <Result result={tocDoCat} text="Tốc độ cắt:" unit="sec" setValue={setTocDoCat} />
+                        <Result result={tocDoCat} text="Tốc độ cắt:" unit="ph" setValue={setTocDoCat} />
                     </Grid>
                     <Grid item sm={12} md={6}>  
-                        <Result result={kq} text={text} unit="sec" setValue={setKq} />
+                        <Result result={kq} text={text} unit="ph" setValue={setKq} />
                     </Grid>
                 </Grid>
                 <br></br>

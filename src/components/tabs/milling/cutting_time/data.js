@@ -10,17 +10,17 @@ export const kieus = [
                     {
                         value: 10,
                         label: 10,
-                        kq: 'None'
+                        kq: 'Không có giá trị'
                     },
                     {
                         value: 20,
                         label: 20,
-                        kq: 'None'
+                        kq: 'Không có giá trị'
                     },
                     {
                         value: 30,
                         label: 30,
-                        kq: 'None'
+                        kq: 'Không có giá trị'
                     },
                     {
                         value: 40,
@@ -60,7 +60,7 @@ export const kieus = [
                     {
                         value: 200,
                         label: 200,
-                        kq: 'None'
+                        kq: 'Không có giá trị'
                     }
                 ]
             },
@@ -71,17 +71,17 @@ export const kieus = [
                     {
                         value: 10,
                         label: 10,
-                        kq: 'None'
+                        kq: 'Không có giá trị'
                     },
                     {
                         value: 20,
                         label: 20,
-                        kq: 'None'
+                        kq: 'Không có giá trị'
                     },
                     {
                         value: 30,
                         label: 30,
-                        kq: 'None'
+                        kq: 'Không có giá trị'
                     },
                     {
                         value: 40,
@@ -121,7 +121,7 @@ export const kieus = [
                     {
                         value: 200,
                         label: 200,
-                        kq: 'None'
+                        kq: 'Không có giá trị'
                     }
                 ]
             }

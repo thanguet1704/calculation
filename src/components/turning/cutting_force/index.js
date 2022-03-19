@@ -106,7 +106,7 @@ export const CuttingForce = () => {
                     <InputCommon src={ap} placeholder="Depth of Cut" setValue={setD1}/>
                     <Selector src={kc} defaultLabe="Specific Cutting Force" items={CuttingForces}/>
                 </div>
-                <Result src={wp} result={result} unit="kN" setValue={setResult} />
+                <Result result={result} unit="kN" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

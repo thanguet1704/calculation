@@ -29,7 +29,7 @@ export const MillingSpindleSpeed = () => {
                         <InputCommon src={dm} placeholder="Diameter" setValue={setF}/>
                     </Grid>
                 </Grid>
-                <Result src={wn} result={result} unit="min" sup="-1" setValue={setResult} />
+                <Result result={result} unit="min" sup="-1" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

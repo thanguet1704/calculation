@@ -26,7 +26,7 @@ export const Turning17 = () => {
     return (
         <form>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <h4><b>1.7. Tốc độ cắt V<sub>c60</sub> (m/ph) khi tiện với dao cemented carbide </b></h4>
+                <h4><b>1.7. Tốc độ cắt v<sub>60</sub> (m/ph) khi tiện với dao cemented carbide </b></h4>
                 <Grid container spacing={2}>
                     <Grid item xs={12}> 
                         <Selector text="Phôi" items={rens} setSelected={setSelectedRen} setValue={setRen} disable={true}/>
