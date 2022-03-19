@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Calculation } from './components/tabs/calculation';
 import Container from '@mui/material/Container';
 import SvgIcon from '@mui/material/SvgIcon';
-import bg from './public/img/bg.png';
+import logo from './public/img/logo_header.png';
 
 const headerStyle = {
   backgroundColor: 'rgb(103, 134, 255)',
@@ -22,7 +22,7 @@ function App() {
       <Container maxWidth="xl" style={{ boxShadow: '0 0 20px rgb(0 0 0 / 30%)' }}>
         <div style={{ textAlign: 'center', paddingTop: 10 }}><h1> TÍNH/TRA CÁC THÔNG SỐ CƠ BẢN KHI GIA CÔNG CƠ</h1></div>
         <img 
-          src="http://cokhi.dut.udn.vn/wp-content/uploads/Logo/logo_cokhi.png" 
+          src={logo}
           alt="Faculty of Mechanical Engineering – University of Science and Technology – The University of Danang" />
           <br/>
           <br/>
