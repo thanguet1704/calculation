@@ -87,6 +87,8 @@ export const CuttingTimeT1 = () => {
     const [ap, setAp] = useState(0);
     const [reset, setReset] = useState(false);
 
+    const [selected, setSelected] = useState(0);
+
     const handleOnClick = () => {
         setResult(0);
         document.getElementById('tab-ex').reset();
@@ -107,7 +109,7 @@ export const CuttingTimeT1 = () => {
                         <InputCommon text="Tổng chiều dài gia công: L(mm)" placeholder="Nhập thông số" setValue={setL}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>
-                        <Selector text="Chiều sâu ren: t(mm)" defaultLabel="Chọn thông số" items={tItems} disable={true} setValue={setT}/>
+                        <Selector text="Chiều sâu ren: t(mm)" setSelected={setSelected} items={tItems} disable={true} setValue={setT}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>  
                         <InputCommon text="Số đầu mối: g" placeholder="Nhập thông số" setValue={setG}/>
@@ -119,7 +121,7 @@ export const CuttingTimeT1 = () => {
                         <InputCommon text="Tốc độ cắt: v(m/ph)" placeholder="Nhập thông số" setValue={setVc}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}> 
-                        <Selector text="Số lần cắt: p" defaultLabel="Chọn thông số" items={pItems} disable={true} setValue={setP}/>
+                        <Selector text="Số lần cắt: p" setSelected={setSelected} items={pItems} disable={true} setValue={setP}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>
                         <InputCommon text="Chiều sâu cắt: ap(mm)" placeholder="Nhập thông số" setValue={setAp}/>

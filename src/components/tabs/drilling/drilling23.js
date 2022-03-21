@@ -20,14 +20,14 @@ export const Drilling23 = () => {
     };
 
     useEffect(() => {
-        const m = (p * p * kc * k) / (8 * Math.pow(10, 3));
+        const m = (p * p * d * kc * k) / (8 * Math.pow(10, 3));
         setResult(m);
     }, [p, d, k, kc]);
 
     return (
         <form id="khoan2.3">
             <div style={{ display: 'flex', flexDirection: 'column'}}>
-                <h4><b>2.3. Taro</b></h4>
+                <h4><b>2.4 Taro</b></h4>
                 <Grid container spacing={2}>
                     <Grid item sm={12} md={6} lg={3}> 
                         <InputCommon text="Bước ren" placeholder="Nhập thông số" setValue={setP}/>
@@ -42,7 +42,7 @@ export const Drilling23 = () => {
                         <InputCommon text="Lực cắt đơn vị" placeholder="Nhập thông số" setValue={setKc}/>
                     </Grid>
                 </Grid>
-                <Result  result={result} unit="ph" setValue={setResult} />
+                <Result  result={result} text="Mô men" unit="Nm" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

@@ -62,7 +62,8 @@ export const MillingPowerRequirement = () => {
     return (
         <form id="phay2.2">
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <h4><b>2.2. Chọn chiều rộng dao phay (Dao phay rãnh dạng đĩa) hoặc đường kính dao phay (dao phay ngón).</b></h4>
+                <h4><b>2.2. Tốc độ cắt v (m/ph), lượng chạy dao răng s<sub>z</sub> (mm/răng) và thông số hình học dao làm từ cemented
+ carbide. Giá trị khi tiện thô tương ứng với chiều sâu cắt t = 10mm</b></h4>
                 <Grid container spacing={2}>
                     <Grid item xs={12} xl={4} lg={6}> 
                         <Selector text="Vật liệu dao" items={vatLieuDaos} setSelected={setSelectedVatLieuDao} setValue={setVatLieuDao} disable={true}/>
@@ -76,10 +77,10 @@ export const MillingPowerRequirement = () => {
                 </Grid>
                 <Grid container spacing={2}>
                     <Grid item xs={12} lg={6}> 
-                        <Result text="fz (mm/răng):" result={f} unit="ph" />
+                        <Result text="sz:" result={f} unit="mm/răng" />
                     </Grid>
                     <Grid item xs={12} lg={6}> 
-                        <Result text="Vc (m/ph):" result={v} unit="ph" />
+                        <Result text="v:" result={v} unit="m/ph" />
                     </Grid>
                     <Grid item xs={12} lg={6}> 
                         <Result text="α°:" result={a} unit="°" />

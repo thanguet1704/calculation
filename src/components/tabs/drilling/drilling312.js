@@ -22,7 +22,7 @@ export const Drilling312 = () => {
     };
 
     useEffect(() => {
-        const L = d / (2 * Math.tan(o/ 2)) + l + 1;
+        const L = d / (2 * Math.tan(o/ 2 * Math.Pi / 180)) + l + 1;
         const th = (L * i) / (f * n);
         setResult(th);
     }, [d, o, l, i, n, f]);
@@ -51,7 +51,7 @@ export const Drilling312 = () => {
                         <InputCommon text="Lượng chạy dao" placeholder="Nhập thông số" setValue={setF}/>
                     </Grid>
                 </Grid>
-                <Result  result={result} unit="ph" setValue={setResult} />
+                <Result  result={result} text="Thời gian gia công:" unit="ph" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

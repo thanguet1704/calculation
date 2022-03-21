@@ -18,7 +18,7 @@ export const PhayRanh = () => {
 
     const handleOnClick = () => {
         setResult(0);
-        document.getElementById('phay4.5').reset();
+        document.getElementById('phay4.4').reset();
         setReset(true);
     };
 
@@ -28,9 +28,9 @@ export const PhayRanh = () => {
     }, [l, d, i, f1, f2, t, n])
 
     return (
-        <form id="phay4.5">
+        <form id="phay4.4">
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <h4><b>4.5. Phay rãnh</b></h4>
+                <h4><b>4.4. Phay rãnh</b></h4>
                 <Grid container spacing={2}>
                     <Grid item xs={12} xl={3} lg={4}> 
                         <InputCommon text="Chiều dài phôi l (mm)" placeholder="Nhập thông số" setValue={setL}/>
@@ -54,7 +54,7 @@ export const PhayRanh = () => {
                         <InputCommon text="Số vòng quay n(vòng/ph)" placeholder="Nhập thông số" setValue={setN}/>
                     </Grid>
                 </Grid>
-                <Result result={result} unit="kW" setValue={setResult} />
+                <Result result={result} unit="ph" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

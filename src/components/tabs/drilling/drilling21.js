@@ -26,19 +26,19 @@ export const Drilling21 = () => {
     return (
         <form id="khoan2.1">
             <div style={{ display: 'flex', flexDirection: 'column'}}>
-                <h4><b>2.1. Khoan thường</b></h4>
+                <h4><b>2.2 Khoan lỗ </b></h4>
                 <Grid container spacing={2}>
                     <Grid item sm={12} md={6} lg={4}> 
                         <InputCommon text="Đường kính lỗ khoan D (mm)" placeholder="Nhập thông số" setValue={setD}/>
                     </Grid>
                     <Grid item sm={12} md={6} lg={4}>
-                        <InputCommon text="Lượng chạy dao f (mm/vòng)" placeholder="Nhập thông số" setValue={setF}/>
+                        <InputCommon text="Lượng chạy dao s (mm/vòng)" placeholder="Nhập thông số" setValue={setF}/>
                     </Grid>
                     <Grid item sm={12} md={6} lg={4}>  
                         <InputCommon text="Lực cắt đơn vị kc (N/mm2)" placeholder="Nhập thông số" setValue={setKc}/>
                     </Grid>
                 </Grid>
-                <Result  result={result} unit="ph" setValue={setResult} />
+                <Result  result={result} text="Mô men" unit="Nm" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

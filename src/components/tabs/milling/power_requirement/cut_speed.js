@@ -24,8 +24,8 @@ export const CutSpeed = () => {
     return (
         <form id="phay2.3">
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <h4><b>2.3. Tốc độ cắt v (m/ph), lượng chạy dao răng f<sub>z</sub> (mm/răng) và thông số hình học dao làm từ cemented carbide. 
-                    Giá trị khi tiện thô tương ứng với chiều sâu cắt a = 10mm.</b></h4>
+                <h4><b>2.3. Tốc độ cắt v (m/ph), lượng chạy dao răng s<sub>z</sub> (mm/răng) và thông số hình học dao làm từ cemented carbide. 
+                    Giá trị khi tiện thô tương ứng với chiều sâu cắt t = 10mm</b></h4>
                 <Grid container spacing={2}>
                     <Grid item xs={12} xl={3} lg={4}> 
                         <InputCommon text="Vật liệu dao" placeholder="Nhập thông số" setValue={setM}/>
@@ -52,7 +52,7 @@ export const CutSpeed = () => {
                         <InputCommon text="Góc xoắn λ°" placeholder="Nhập thông số" setValue={setPt2}/>
                     </Grid>
                 </Grid>
-                <Result result={result} unit="kW" setValue={setResult} />
+                <Result result={result} text="" unit="kW" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

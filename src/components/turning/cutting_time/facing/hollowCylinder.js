@@ -22,7 +22,7 @@ export const HollowCylinder = () => {
 
     useEffect(() => {
         const cylinder = (((4 + (dValue - d1Value) / 2) * iValue * Math.PI * ((dValue + d1Value) / 2)) 
-        / (fValue * vcValue * 10 * 10 * 10)).toFixed(2);
+        / (fValue * vcValue * 10 * 10 * 10));
         setResult(cylinder);
     }, [dValue, d1Value, iValue, fValue, vcValue]);
 
@@ -32,13 +32,13 @@ export const HollowCylinder = () => {
                 <h4><b>[Trụ rỗng]</b></h4>
                 <Grid container spacing={2}>
                     <Grid item xs={12} xl={3} lg={4}> 
-                        <InputCommon text="Số lần cắt: i" placeholder="Nhập thông số" setValue={setD}/>
+                        <InputCommon text="Số lần cắt: i" placeholder="Nhập thông số" setValue={setI}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>
-                        <InputCommon text="Đường kính ngoài: D(mm)" placeholder="Nhập thông số"setValue={setD1}/>
+                        <InputCommon text="Đường kính ngoài: D(mm)" placeholder="Nhập thông số"setValue={setD}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>  
-                        <InputCommon text="Đường kính trong: d(mm)" placeholder="Nhập thông số" setValue={setI}/>
+                        <InputCommon text="Đường kính trong: d(mm)" placeholder="Nhập thông số" setValue={setD1}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>
                         <InputCommon text="Lượng chạy dao: f(mm)" placeholder="Nhập thông số" setValue={setF}/>

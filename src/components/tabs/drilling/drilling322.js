@@ -23,7 +23,7 @@ export const Drilling322 = () => {
     };
 
     useEffect(() => {
-        const L = (d1 - d2) / (2 * Math.tan(o/ 2)) + l + 1;
+        const L = (d2 - d1) / (2 * Math.tan(o/ 2 * Math.PI / 180)) + l + 1;
         const th = (L * i) / (f * n);
         setResult(th);
     }, [d1, d2, o, l, i, n, f]);
@@ -34,7 +34,7 @@ export const Drilling322 = () => {
                 <h4><b>3.2.2 Lỗ không thông</b></h4>
                 <Grid container spacing={2}>
                     <Grid item sm={12} md={6} lg={3}> 
-                        <InputCommon text="Đường kính nh" placeholder="Nhập thông số" setValue={setD1}/>
+                        <InputCommon text="Đường kính nhỏ" placeholder="Nhập thông số" setValue={setD1}/>
                     </Grid>
                     <Grid item sm={12} md={6} lg={3}>
                         <InputCommon text="Đường kính lớn" placeholder="Nhập thông số" setValue={setD2}/>
@@ -43,10 +43,10 @@ export const Drilling322 = () => {
                         <InputCommon text="Chiều sâu lỗ" placeholder="Nhập thông số" setValue={setL}/>
                     </Grid>
                     <Grid item sm={12} md={6} lg={3}>  
-                        <InputCommon text="Góc mũi khoan" placeholder="Nhập thông số" setValue={setO}/>
+                        <InputCommon text="Góc mũi khoét" placeholder="Nhập thông số" setValue={setO}/>
                     </Grid>
                     <Grid item sm={12} md={6} lg={3}>  
-                        <InputCommon text="Số lỗ khoan" placeholder="Nhập thông số" setValue={setI}/>
+                        <InputCommon text="Số lỗ khoét" placeholder="Nhập thông số" setValue={setI}/>
                     </Grid>
                     <Grid item sm={12} md={6} lg={3}>  
                         <InputCommon text="Số vòng quay" placeholder="Nhập thông số" setValue={setN}/>
@@ -55,7 +55,7 @@ export const Drilling322 = () => {
                         <InputCommon text="Lượng chạy dao" placeholder="Nhập thông số" setValue={setF}/>
                     </Grid>
                 </Grid>
-                <Result  result={result} unit="ph" setValue={setResult} />
+                <Result  result={result} text="Thời gian gia công:" unit="ph" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

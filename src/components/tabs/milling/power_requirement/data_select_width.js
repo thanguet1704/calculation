@@ -11,26 +11,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.22',
-                        ae8: {
+                        t8: {
                             value: 24,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 33,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.22',
-                        ae8: {
+                        t8: {
                             value: 20,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 30,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
@@ -65,26 +65,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.22',
-                        ae8: {
+                        t8: {
                             value: 120,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 200,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.22',
-                        ae8: {
+                        t8: {
                             value: 120,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 200,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
@@ -125,26 +125,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.18',
-                        ae8: {
+                        t8: {
                             value: 20,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 33,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.18',
-                        ae8: {
+                        t8: {
                             value: 18,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 30,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
@@ -179,26 +179,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.22',
-                        ae8: {
+                        t8: {
                             value: 80,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 200,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.22',
-                        ae8: {
+                        t8: {
                             value: 70,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 180,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
@@ -239,26 +239,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.12',
-                        ae8: {
+                        t8: {
                             value: 15,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 28,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.12',
-                        ae8: {
+                        t8: {
                             value: 14,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 25,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
@@ -293,26 +293,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.12',
-                        ae8: {
+                        t8: {
                             value: 70,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 150,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.12',
-                        ae8: {
+                        t8: {
                             value: 65,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 140,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
@@ -353,26 +353,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.12',
-                        ae8: {
+                        t8: {
                             value: 10,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 25,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.12',
-                        ae8: {
+                        t8: {
                             value: 9,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 18,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
@@ -407,26 +407,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.12',
-                        ae8: {
+                        t8: {
                             value: 50,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 100,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.12',
-                        ae8: {
+                        t8: {
                             value: 45,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 90,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
@@ -467,26 +467,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.09',
-                        ae8: {
+                        t8: {
                             value: 8,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 13,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.09',
-                        ae8: {
+                        t8: {
                             value: 7,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 12,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
@@ -521,26 +521,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.09',
-                        ae8: {
+                        t8: {
                             value: 20,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 60,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.09',
-                        ae8: {
+                        t8: {
                             value: 20,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 60,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
@@ -581,26 +581,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.18',
-                        ae8: {
+                        t8: {
                             value: 12,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 16,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.12',
-                        ae8: {
+                        t8: {
                             value: 10,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 14,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
@@ -635,26 +635,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.18',
-                        ae8: {
+                        t8: {
                             value: 40,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 85,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.12',
-                        ae8: {
+                        t8: {
                             value: 35,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 80,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
@@ -695,26 +695,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.22',
-                        ae8: {
+                        t8: {
                             value: 15,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 25,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.22',
-                        ae8: {
+                        t8: {
                             value: 13,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 22,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
@@ -749,26 +749,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.22',
-                        ae8: {
+                        t8: {
                             value: 60,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 100,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.22',
-                        ae8: {
+                        t8: {
                             value: 55,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 90,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
@@ -809,26 +809,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.22',
-                        ae8: {
+                        t8: {
                             value: 10,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 18,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.18',
-                        ae8: {
+                        t8: {
                             value: 9,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 16,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
@@ -863,26 +863,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.22',
-                        ae8: {
+                        t8: {
                             value: 40,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 80,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.18',
-                        ae8: {
+                        t8: {
                             value: 35,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 75,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
@@ -923,26 +923,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.22',
-                        ae8: {
+                        t8: {
                             value: 35,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 75,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.18',
-                        ae8: {
+                        t8: {
                             value: 32,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 70,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
@@ -977,26 +977,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.22',
-                        ae8: {
+                        t8: {
                             value: 80,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 200,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.18',
-                        ae8: {
+                        t8: {
                             value: 75,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 180,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
@@ -1037,26 +1037,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.12',
-                        ae8: {
+                        t8: {
                             value: 80,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 200,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.12',
-                        ae8: {
+                        t8: {
                             value: 70,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 180,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
@@ -1091,26 +1091,26 @@ export const Phois = [
                         value: 1,
                         label: 'Dao phay trụ',
                         fz: '0.12',
-                        ae8: {
+                        t8: {
                             value: 100,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 300,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {
                         value: 2,
                         label: 'Dao phay đĩa 3 mặt',
                         fz: '0.12',
-                        ae8: {
+                        t8: {
                             value: 90,
-                            label: 'ae = 8'
+                            label: 't = 8'
                         },
-                        ae1: {
+                        t1: {
                             value: 280,
-                            label: 'ae = 1'
+                            label: 't = 1'
                         }
                     },
                     {

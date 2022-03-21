@@ -49,7 +49,6 @@ export const CuttingSpeedCastSteel = () => {
 
     useEffect(() => {
         setResult(fs.find(item => item.value === fValue)?.result);
-        console.log(result);
     }, [fValue]);
 
     return (
@@ -67,7 +66,7 @@ export const CuttingSpeedCastSteel = () => {
                         <Selector text="Chiều sâu cắt ap(mm)" defaultLabel="Chọn chiều sâu cắt" items={aps} setSelected={setSelectedAp} setValue={setApValue} disable={selectedCuttingMaterial}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>
-                        <Selector text="Lượng chạy dao f(mm/v)" defaultLabel="Chọn lượng chạy dao" items={fs} setValue={setFValue} setSelected={setSelectedF} disable={selectedAp}/>
+                        <Selector text="Lượng chạy dao s(mm/v)" defaultLabel="Chọn lượng chạy dao" items={fs} setValue={setFValue} setSelected={setSelectedF} disable={selectedAp}/>
                     </Grid>
                 </Grid>
                 <Result result={result} unit="m/ph" setValue={setResult} />

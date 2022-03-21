@@ -54,6 +54,11 @@ import { Turning14 } from '../turning/turning_14';
 import { Turning15 } from '../turning/turning_15';
 import { Turning16 } from '../turning/turning_16';
 import { Turning17 } from '../turning/turning_17';
+import { Drilling211 } from './drilling/drilling211';
+import { PhayThoDungTam } from './milling/proccessing_time/phay_dung_tam';
+import { PhayTinhDungTam } from './milling/proccessing_time/phay_tinh_dung_tam';
+import { PhayThoLechTam } from './milling/proccessing_time/phay_lech_tam_tho';
+import { PhayTinhLechTam } from './milling/proccessing_time/phay_lech_tam_tinh';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -230,8 +235,8 @@ export const Calculation = (props) => {
           <SelectWidth />
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
           <MillingPowerRequirement />
-          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
-          <CutSpeed />
+          {/* <hr style={{ borderTop: 'dashed #DDD 1px' }}/> */}
+          {/* <CutSpeed /> */}
         </div>
         <div id="vc">
           <h2><b>3. Công suất yêu cầu P (kW).<hr/></b></h2>
@@ -240,10 +245,20 @@ export const Calculation = (props) => {
         <div id="pt">
           <h2><b>4. Thời gian gia công t<sub>h</sub> (ph)<hr/></b></h2>
           <PhayChuVi />
-          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
           <PhayTho />
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
           <PhayTinh />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <h4>4.2. Phay mặt đầu</h4>
+          <h4>4.2.1. Phay đúng tâm</h4>
+          <PhayThoDungTam />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <PhayTinhDungTam />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <h4>4.2.2. Phay lệch tâm</h4>
+          <PhayThoLechTam />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
+          <PhayTinhLechTam />
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
           <PhayTinh2 />
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
@@ -274,6 +289,8 @@ export const Calculation = (props) => {
         </div>
         <div id="pc">
           <h2><b>2. Mô men<hr/></b></h2>
+          <Drilling211 />
+          <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
           <Drilling21 />
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
           <Drilling22 />
@@ -282,7 +299,7 @@ export const Calculation = (props) => {
         </div>
         <div id="vc">
           <h2><b>3. Thời gian gia công t<sub>h</sub> (ph)<hr/></b></h2>
-          <h3>3.1. Khoan thường</h3>
+          <h3>3.1. Khoan lỗ</h3>
           <Drilling311 />
           <hr style={{ borderTop: 'dashed #DDD 1px' }}/>
           <Drilling312 />
@@ -301,6 +318,5 @@ export const Calculation = (props) => {
         </div>
       </Box>
     </TabPanel>
-    <h2 class="phtion-title hidden-phone">Cutting Calculation App 「SumiTool Calculator」</h2>
   </Box>
 )};

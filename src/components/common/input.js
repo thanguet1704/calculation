@@ -19,13 +19,13 @@ const imgStyle = {
 };
 
 
-export const InputCommon = ({ src, placeholder, setValue, text, disable, defaultValue, min, max }) => {
+export const InputCommon = ({ src, placeholder, setValue, text, disable, defaultValue, value }) => {
     const handleOnChange = (e) => {
         if (Number(e.target.value) < 0) {
             e.target.value = "";
         }
 
-        setValue(e.target.value);
+        setValue(Number(value) || Number(e.target.value));
     }
 
     return (

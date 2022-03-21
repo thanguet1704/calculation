@@ -46,10 +46,10 @@ const spanStyle = {
     justifyContent: 'center',
 };
 
-export const Result = ({ src, result, unit, sup, text}) => {
+export const Result = ({ src, result, unit, sup, text, type}) => {
     return (
         <p style={resultStyle}>
-            <output style={outputStyle}>{result || 'Không có giá trị'} <span style={spanStyle}>{unit}<sup>{sup}</sup></span></output>
+            <output style={outputStyle}>{type === 'string' ? result : Number(result).toFixed(2) || 'Không có giá trị'} <span style={spanStyle}>{unit}<sup>{sup}</sup></span></output>
             {text ? <p>{text}</p> : <img src={src} alt="" style={imgStyle} />}
         </p>
     );

@@ -21,6 +21,8 @@ export const PowerCut = () => {
     const [z, setZ] = useState(0);
     const [reset, setReset] = useState(false);
 
+    const [selectedA, setSelectedA] = useState(0);
+
     const handleOnClick = () => {
         setResult(0);
         document.getElementById('tien3').reset();
@@ -43,7 +45,7 @@ export const PowerCut = () => {
                         <InputCommon text="Lượng chạy dao: f(mm/vòng)" placeholder="Nhập thông số" setValue={setF}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>  
-                        <Selector text="Lực cắt đơn vị: kc1.1(N/mm2)" defaultLabel="Nhập thông số" disable={true} setValue={setKc} items={kcItems}/>
+                        <Selector text="Lực cắt đơn vị: kc1.1(N/mm2)" setSelected={setSelectedA} disable={true} setValue={setKc} items={kcItems}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>
                         <InputCommon text="Góc cắt: α°" placeholder="Nhập thông số" setValue={setA}/>
@@ -52,19 +54,19 @@ export const PowerCut = () => {
                         <InputCommon text="Góc trước thực tế: γtat°" placeholder="Nhập thông số" setValue={setYt}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}> 
-                        <Selector text="Góc trước: γo°" defaultLabel="Chọn thông số" disable={true} setValue={setY0} items={y0Items}/>
+                        <Selector text="Góc trước: γo°" setSelected={setSelectedA} disable={true} setValue={setY0} items={y0Items}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>
-                        <Selector text="Hệ số hiệu chỉnh tốc độ cắt: Kv" defaultLabel="Chọn thông số" disable={true} setValue={setKv} items={kvItems}/>
+                        <Selector text="Hệ số hiệu chỉnh tốc độ cắt: Kv" setSelected={setSelectedA} disable={true} setValue={setKv} items={kvItems}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>
                         <InputCommon text="Hệ số hao mòn Kver" disable={true} setValue={setKver} defaultValue={kver}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>
-                        <Selector text="Hệ số nén: Kst" defaultLabel="Chọn thông số" setValue={setKst} items={kstItems} disable={true}/>
+                        <Selector text="Hệ số nén: Kst" setSelected={setSelectedA} setValue={setKst} items={kstItems} disable={true}/>
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>
-                        <Selector text="Hằng số vật liệu: z" defaultLabel="Chọn thông số" setValue={setZ} items={zItems} disable={true}/>
+                        <Selector text="Hằng số vật liệu: z" setSelected={setSelectedA} setValue={setZ} items={zItems} disable={true}/>
                     </Grid>
                 </Grid>
                 <Result  result={result} unit="mm/rev" setValue={setResult} />

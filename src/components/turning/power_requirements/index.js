@@ -42,12 +42,12 @@ export const PowerRequirement = () => {
                         <InputCommon text=" Vận tốc cắt: v(m/ph)" placeholder="Nhập thông số" setValue={setVc}/>
                     </Grid>
                     <Grid item xs={12} lg={4}>  
-                        <InputCommon text="Hiệu suất máy: η = 0.7-0.8"  min="0.7" max="0.8" placeholder="Nhập thông số" setValue={setNm}/>
+                        <InputCommon text="Hiệu suất máy: η = 0.7-0.8" placeholder="Nhập thông số" setValue={setNm}/>
                     </Grid>
                 </Grid>
                 <div style={divInputStyle}>
                 </div>
-                <Result  result={result} unit="kW" setValue={setResult} />
+                <Result  result={result} text="Công suất yêu cầu:" unit="kW" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

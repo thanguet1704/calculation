@@ -51,7 +51,6 @@ export const CuttingSpeedSteel = () => {
 
     useEffect(() => {
         setResult(fs.find(item => item.value === fValue)?.result);
-        console.log(result);
     }, [fValue]);
 
     return (
@@ -88,7 +87,7 @@ export const CuttingSpeedSteel = () => {
                     </Grid>
                     <Grid item xs={12} xl={3} lg={4}>
                         <Selector 
-                            text="Lượng chạy dao f(mm/v)" 
+                            text="Lượng chạy dao s(mm/v)" 
                             defaultLabel="Chọn lượng chạy dao" 
                             items={fs} 
                             setValue={setFValue} 

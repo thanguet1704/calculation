@@ -37,7 +37,7 @@ export const Drilling4 = () => {
                         <InputCommon text="Hiệu suất máy η (0,7 – 0,9)" min="0.7" max="0.9" placeholder="Nhập thông số" setValue={setN2}/>
                     </Grid>
                 </Grid>
-                <Result  result={result} unit="ph" setValue={setResult} />
+                <Result  result={result} text="Công suất yêu cầu:" unit="kW" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

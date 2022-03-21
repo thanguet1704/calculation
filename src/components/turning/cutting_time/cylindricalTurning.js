@@ -28,7 +28,7 @@ export const CylindricalTurning = () => {
     };
 
     useEffect(() => {
-        const cylindrical = (((lValue + 4) * iValue * Math.PI * dValue ) / (fValue * vcValue * 10 * 10 * 10)).toFixed(2);
+        const cylindrical = (((lValue + 4) * iValue * Math.PI * dValue ) / (fValue * vcValue * 10 * 10 * 10));
         setResult(cylindrical);
     }, [lValue, iValue, dValue, fValue, vcValue]);
 

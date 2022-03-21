@@ -45,10 +45,10 @@ export const Drilling11 = () => {
                 </Grid>
                 <Grid container spacing={3}>
                     <Grid item sm={12} md={6}> 
-                        <Result text="Tốc độ cắt" result={tocDoCat} unit="ph" setValue={setTocDoCat} />
+                        <Result text="Tốc độ cắt" result={tocDoCat} type="string" unit="m/ph" setValue={setTocDoCat} />
                     </Grid>
                     <Grid item sm={12} md={6}>
-                        <Result text="Lượng chạy dao" result={luongChayDao} unit="ph" setValue={setLuongChayDao} />
+                        <Result text="Lượng chạy dao" result={luongChayDao} unit="mm/v" setValue={setLuongChayDao} />
                     </Grid>
                 </Grid>
                 <br></br>

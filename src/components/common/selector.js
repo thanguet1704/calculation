@@ -36,7 +36,7 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
   }
 }));
 
-export const Selector = ({ text, src, defaultLabel, items, setSelected, setValue, disable}) => {
+export const Selector = ({ text, src, items, setSelected, setValue, disable}) => {
   const [valueSelect, setValueSelect] = React.useState();
 
   const handleChange = (event) => {

@@ -49,8 +49,9 @@ export const SelectWidth = () => {
     return (
         <form id="phay2.1">
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <h4><b>2.1. Chọn lượng chạy dao răng và tốc độ cắt cho phép với chiều sâu cắt a<sub>p</sub> = 8mm cho phay thô và chiều sâu cắt a<sub>p</sub> = 1mm 
-                    cho phay tinh với dao phay mặt phẳng và dao phay mặt phẳng bù trực giao</b></h4>
+                <h4><b>2.1.  Lượng chạy dao răng s<sub>z</sub> (mm/răng) và tốc độ cắt cho phép khi phay với vật liệu dao thép gió và cemented carbide 
+với chiều sâu cắt t = 8mm (phay thô) và t = 1mm (phay tinh) hoặc với bề rộng dao phay b (mm) (dao phay dạng đĩa)
+ hoặc với đường kính dao phay Ø (dao phay ngón)</b></h4>
                 <Grid container spacing={2}>
                     <Grid item xs={12} xl={4}> 
                         <Selector text="Phôi" items={phois} setSelected={setSelectedPhoi} setValue={setPhoi} disable={true}/>
@@ -64,12 +65,12 @@ export const SelectWidth = () => {
                 </Grid>
                 {show && <Grid container spacing={2}>
                     <Grid item xs={12}> 
-                        {thongSo?.fz ? <Result text="fz" result={thongSo?.fz} unit="s"/> : <></>}
-                        {thongSo?.ae8 ? <Result text={thongSo?.ae8.label} result={thongSo?.ae8.value} unit="s"/> : <></>}
-                        {thongSo?.ae1 ? <Result text={thongSo?.ae1.label} result={thongSo?.ae1.value} unit="s"/> : <></>}
-                        {thongSo?.rong ? <Result text={thongSo?.rong.label} result={thongSo?.rong.value} unit="s"/> : <></>}
-                        {thongSo?.duongKinh1 ? <Result text={thongSo?.duongKinh1.label} result={thongSo?.duongKinh1.value} unit="s"/> : <></>}
-                        {thongSo?.duongKinh2 ? <Result text={thongSo?.duongKinh2.label} result={thongSo?.duongKinh2.value} unit="s"/> : <></>}
+                        {thongSo?.fz ? <Result text="sz" result={thongSo?.fz} unit="mm/răng"/> : <></>}
+                        {thongSo?.t8 ? <Result text={thongSo?.t8.label} result={thongSo?.t8.value} unit="mm"/> : <></>}
+                        {thongSo?.t1 ? <Result text={thongSo?.t1.label} result={thongSo?.t1.value} unit="mm"/> : <></>}
+                        {thongSo?.rong ? <Result text={thongSo?.rong.label} result={thongSo?.rong.value} unit="mm"/> : <></>}
+                        {thongSo?.duongKinh1 ? <Result text={thongSo?.duongKinh1.label} result={thongSo?.duongKinh1.value} unit="mm"/> : <></>}
+                        {thongSo?.duongKinh2 ? <Result text={thongSo?.duongKinh2.label} result={thongSo?.duongKinh2.value} unit="mm"/> : <></>}
                     </Grid>
                 </Grid>}
                 <br></br>

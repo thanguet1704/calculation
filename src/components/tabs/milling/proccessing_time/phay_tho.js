@@ -22,7 +22,7 @@ export const PhayTho = () => {
     };
 
     useEffect(() => {
-        const L = l + 3 + 2 * Math.sqrt(d * a - Math.pow(a, a));
+        const L = Number(l) + 3 + Math.sqrt(d * a - a * a);
         const th = (L * i) / (f * n);
         setResult(th);
     }, [l, d, a, i, f, n])
@@ -30,7 +30,7 @@ export const PhayTho = () => {
     return (
         <form id="phay4.2">
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <h4><b>4.2 Phay thô</b></h4>
+                <h4><b>4.1.1 Phay thô</b></h4>
                 <Grid container spacing={2}>
                     <Grid item sm={12} xs={6} xl={3} lg={4}> 
                         <InputCommon text="Chiều dài phôi l (mm)" placeholder="Nhập thông số" setValue={setL}/>
@@ -45,13 +45,13 @@ export const PhayTho = () => {
                         <InputCommon text="Số lần phay i" placeholder="Nhập thông số" setValue={setI}/>
                     </Grid>
                     <Grid item sm={12} xs={6} xl={3} lg={4}>  
-                        <InputCommon text="Lượng chạy dao f(mm/vòng)" placeholder="Nhập thông số" setValue={setF}/>
+                        <InputCommon text="Lượng chạy dao s(mm/vòng)" placeholder="Nhập thông số" setValue={setF}/>
                     </Grid>
                     <Grid item sm={12} xs={6} xl={3} lg={4}>  
                         <InputCommon text="Số vòng quay n(vòng/ph)" placeholder="Nhập thông số" setValue={setN}/>
                     </Grid>
                 </Grid>
-                <Result result={result} unit="kW" setValue={setResult} />
+                <Result result={result} unit="ph" setValue={setResult} />
                 <br></br>
                 <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
             </div>

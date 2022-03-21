@@ -12,7 +12,7 @@ export const Table712 = () => {
     return (
       <div>
          <div onClick={handleOnClick} className="up-down">
-            <h4>Bảng 7.12 Tốc độ cắt V<sub>c60</sub> (m/ph) và lượng chạy dao f (mm/v) trong tiện tự động</h4>
+            <h4>Bảng 7.12 Tốc độ cắt V<sub>c60</sub> (m/ph) và Lượng chạy dao s (mm/v) trong tiện tự động</h4>
             {show ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
         </div>
         {show && <table>

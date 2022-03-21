@@ -42,13 +42,13 @@ export const Edge = () => {
     return (
         <form id="phay1.2">
             <div style={{ display: 'flex', flexDirection: 'column'}}>
-            <h4><b>1.2. Góc sau, góc trước, góc xoắn của một số dao phay thép gió (<sup>0</sup>)</b></h4>
+            <h4><b>1.2. Góc trước α, góc sau γ, góc xoắn λ của một số dao phay thép gió (<sup>0</sup>)</b></h4>
                 <Grid container spacing={2}>
                     <Grid item xs={12} lg={6}> 
-                        <Selector text="Kiểu dao" items={phois} setSelected={setSelectedPhoi} setValue={setPhoi} disable={true}/>
+                        <Selector text="Phôi" items={phois} setSelected={setSelectedPhoi} setValue={setPhoi} disable={true}/>
                     </Grid>
                     <Grid item xs={12} lg={6}>
-                        <Selector text="Kiểu dao" items={ds} setSelected={setSelectedD} setValue={setD} disable={selectedPhoi}/>
+                        <Selector text="Loại dao" items={ds} setSelected={setSelectedD} setValue={setD} disable={selectedPhoi}/>
                     </Grid>
                 </Grid>
                 <Grid container spacing={2}>

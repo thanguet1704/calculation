@@ -47,13 +47,13 @@ export const Turning15 = () => {
     return (
         <form>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <h4><b>1.5. Tốc độ cắt v<sub>60</sub> (m/ph) và lượng chạy dao f (mm/v) trong tiện tự động</b></h4>
+                <h4><b>1.5. Tốc độ cắt v (m/ph) và Lượng chạy dao s (mm/v) trong tiện tự động với T = 60 (ph)</b></h4>
                 <Grid container spacing={2}>
                     <Grid item xs={12} lg={6}> 
                         <Selector text="Phôi" items={phois} setSelected={setSelectedPhoi} setValue={setPhoi} disable={true}/>
                     </Grid>
                     <Grid item xs={12} lg={6}> 
-                        <Selector text="Phôi" items={luongs} setSelected={setSelectedLuong} setValue={setLuong} disable={setSelectedPhoi}/>
+                        <Selector text=" Tốc độ cắt v và Lượng chạy dao s" items={luongs} setSelected={setSelectedLuong} setValue={setLuong} disable={setSelectedPhoi}/>
                     </Grid>
                 </Grid>
                 <Grid container spacing={2}>

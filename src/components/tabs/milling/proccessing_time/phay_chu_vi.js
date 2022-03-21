@@ -30,30 +30,7 @@ export const PhayChuVi = () => {
     return (
         <form id="phay4.1">
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <h4><b>4.1. Phay chu vi</b></h4>
-                <Grid container spacing={2}>
-                    <Grid item xs={12} xl={3} lg={4}> 
-                        <InputCommon text="Chiều dài phôi l (mm)" placeholder="Nhập thông số" setValue={setL}/>
-                    </Grid>
-                    <Grid item xs={12} xl={3} lg={4}>
-                        <InputCommon text="Đường kính dao D (mm)" placeholder="Nhập thông số" setValue={setD}/>
-                    </Grid>
-                    <Grid item xs={12} xl={3} lg={4}>  
-                        <InputCommon text="Chiều sâu cắt ae (mm)" placeholder="Nhập thông số" setValue={setA}/>
-                    </Grid>
-                    <Grid item xs={12} xl={3} lg={4}>  
-                        <InputCommon text="Số lần phay i" placeholder="Nhập thông số" setValue={setI}/>
-                    </Grid>
-                    <Grid item xs={12} xl={3} lg={4}>  
-                        <InputCommon text="Lượng chạy dao f(mm/vòng)" placeholder="Nhập thông số" setValue={setF}/>
-                    </Grid>
-                    <Grid item xs={12} xl={3} lg={4}>  
-                        <InputCommon text="Số vòng quay n(vòng/ph)" placeholder="Nhập thông số" setValue={setN}/>
-                    </Grid>
-                </Grid>
-                <Result  result={result} unit="kW" setValue={setResult} />
-                <br></br>
-                <Button variant="outlined" style={{ margin: '0 auto' }} onClick={handleOnClick} >Reset</Button>
+                <h4><b>4.1. Phay mặt phẳng bằng dao phay trụ</b></h4>
             </div>
         </form>
     );
