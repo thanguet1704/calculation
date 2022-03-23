@@ -74,3 +74,7 @@ td {
   font-family: 'Times New Roman', Times, serif;
   background-color: 'rgb(103, 134, 255)';
 }
+
+li {
+  list-style-type: none;
+}
